@@ -1,0 +1,9 @@
+:root {
+    /* Orange Dark Theme */
+    --highlight_base: #FF4D00;
+    --highlight_mid: #FF6A00;
+    --highlight_bright: #FFA11E;
+    --dark_base: #4F0000;
+    --dark_mid: #801900;
+    --background_colour: #040404;
+}

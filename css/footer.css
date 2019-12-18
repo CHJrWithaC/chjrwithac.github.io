@@ -1,0 +1,41 @@
+/*
+
+Requires:
++ footer.html
++ xxx_colour_palette.css
++ animations_on_hover.css
++ animations_on_visible.css
+
+*/
+
+#footer {
+    position: relative;
+    height: 20vh;
+    width: 100vw;
+    background: none;
+}
+#footer #nav_arrow_wrapper {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+}
+#footer #nav_arrow_wrapper svg path {
+    fill: var(--highlight_base);
+    opacity: 1;
+}
+#footer #copyright_wrapper {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: inherit;
+    bottom: 5vh;
+}
+#footer #copyright_wrapper p {
+    text-align: center;
+    width: inherit;
+    margin: 0px;
+    padding: 0px;
+    color: var(--dark_mid);
+    font-size: 1.2em;
+}

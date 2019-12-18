@@ -1,0 +1,121 @@
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css?family=Aldrich|Megrim|Offside|Syncopate:400,700&display=swap');
+
+/* Custom Imports */
+@import url("/css/blue_colour_palette.css");
+@import url("/css/global_text_format_1.css");
+@import url("/css/custom_scrollbar_1.css");
+@import url("/css/nav_bar.css");
+@import url("/css/animations_on_hover.css");
+@import url("/css/animations_on_visible.css");
+@import url("/css/footer.css");
+
+html {
+    height: 100%;
+    font-family: "Aldrich";
+    font-size: 62.5%;
+
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    background-color: var(--background_colour);
+    background-size: 100vw 100vh;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+#foreground {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+#content_wrapper {
+    display: flex;
+    justify-content: center;
+    height: inherit;
+    width: inherit;
+}
+#text_block_wrapper {
+    position: relative;
+    display: grid;
+    height: 60vh;
+    margin-top: 14vh;
+}
+#text_block_wrapper h1 {
+    font-size: 6em;
+    align-self: center;
+    min-width: 12em;
+}
+#text_block_wrapper h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 2em;
+    color: var(--highlight_mid);
+}
+#text_block_wrapper h3 {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 2em;
+}
+#text_block_wrapper #text_wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    margin-top: 6vh;
+}
+#text_block_wrapper #text_wrapper p {
+    width: 40vw;
+    min-width: 30em;
+    text-align: center;
+    justify-self: center;
+    margin-top: 0px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+#background {
+    z-index: -1;
+}
+#splash_image_wrapper, #splash_background_wrapper{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+#splash_image_wrapper svg {
+    opacity: 0.2;
+}
+#splash_background_wrapper svg {
+    opacity: 0.3;
+}
+#splash_image_wrapper svg, #splash_background_wrapper svg{
+    position: absolute;
+    align-self: center;
+    height: 90vh;
+    width: auto;
+}
+#splash_image_wrapper #splash_image_svg path,
+#splash_image_wrapper #splash_image_svg rect,
+#splash_image_wrapper #splash_image_svg ellipse {
+    fill: var(--dark_mid);
+}
+#bg_hex_skele_1_svg path {
+    fill: var(--highlight_base);
+}

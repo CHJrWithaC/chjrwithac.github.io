@@ -1,0 +1,9 @@
+:root {
+    /* Purple Dark Theme */
+    --highlight_base: rgb(154, 0, 226);
+    --highlight_mid: rgb(218, 30, 255);
+    --highlight_bright: rgb(201, 136, 255);
+    --dark_base: rgb(65, 0, 78);
+    --dark_mid: #480079;
+    --background_colour: #040404;
+}

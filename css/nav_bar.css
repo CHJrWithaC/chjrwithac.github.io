@@ -1,0 +1,68 @@
+
+/*
+
+Requires:
++ nav_bar.html
++ xxx_colour_palette.css
++ animations_on_hover.css
++ animations_on_visible.css
+
+*/
+
+
+/*** Nav-bar ***/
+
+#nav_bar {
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    height: 8vh;
+    padding-top: 1em;
+    display: flex;
+}
+#logo_block_link_wrapper {
+    text-decoration: none;
+    display: flex;
+    height: inherit;
+    align-self: center;
+    margin-left: 3vw;
+}
+#logo_wrapper {
+    align-self: center;
+    display: flex;
+    height: inherit;
+}
+#logo_wrapper #logo_svg {
+    justify-self: center;
+    align-self: center;
+    height: 80%;
+    width: auto;
+}
+#logo_wrapper #logo_svg path, rect, ellipse {
+    fill: var(--highlight_base);
+}
+#logo_wrapper #logo_text {
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
+    text-decoration: none;
+    font-family: "Aldrich";
+    font-size: 1.6em;
+    color: var(--highlight_base);
+    margin-left: 1em;
+}
+#nav_bar_list {
+    position: relative;
+    display: flex;
+    width: 50vw;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    list-style: none;
+}
+#nav_bar_list li a {
+    text-decoration: none;
+    font-family: "Aldrich";
+    font-size: 1.6em;
+    color: var(--highlight_base);
+}

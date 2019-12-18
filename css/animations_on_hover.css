@@ -1,0 +1,45 @@
+
+/*
+
+To use: Add the desired animation effect's class to the element's class list.
+
+eg.
+<div class = "grow_on_hover"> ... </div>
+
+*/
+
+.grow_on_hover {
+    transition: all 0.2s ease-out;
+}
+.grow_on_hover:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.highlight_on_hover,
+.highlight_on_hover p,
+.highlight_on_hover a,
+.highlight_on_hover path,
+.highlight_on_hover rect,
+.highlight_on_hover ellipse,
+.highlight_on_hover polygon,
+.highlight_on_hover svg path,
+.highlight_on_hover svg rect,
+.highlight_on_hover svg ellipse,
+.highlight_on_hover svg polygon {
+    transition: all 0.2s ease-out;
+}
+.highlight_on_hover:hover,
+.highlight_on_hover:hover p,
+.highlight_on_hover:hover a,
+.highlight_on_hover:hover path,
+.highlight_on_hover:hover rect,
+.highlight_on_hover:hover ellipse,
+.highlight_on_hover:hover polygon,
+.highlight_on_hover:hover svg path,
+.highlight_on_hover:hover svg rect,
+.highlight_on_hover:hover svg ellipse,
+.highlight_on_hover:hover svg polygon {
+    color: var(--highlight_bright) !important;
+    fill: var(--highlight_bright) !important;
+    cursor: pointer;
+}
