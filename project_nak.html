@@ -74,6 +74,7 @@
                                 <p>
                                     Initial algorithms were drafted in MATLAB and simulated in VREP. MATLAB was used for its ability to calculate matrix exponents and logarithms, allowing me to employ spatial transforms in Plucker coordinates as a secondary method to check the behaviour of the algorithms. These concepts were subsequently coded into the Arduino.
                                 </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -85,13 +86,43 @@
                         Key Features
                     </h1>
                     <div class = "key_features_band_content_wrapper">
-                        <section id = "key_feature_1_content_wrapper" class = "key_feature_section odd">
-                            <div class = "media_wrapper">
-                                <video class = "feature_video animate_on_visible slide_right_fade_in" width = "320" height = "240" controls>
-                                    <source src="/project_media/project_nak/videos/20180927_220834.mp4" type="video/mp4">
-                                    ERROR: Your browser does not support the video tag!
-                                </video>
+                        <section class = "key_feature_section odd">
+                            <div class = "carousel_wrapper">
+                                <ul class = "carousel_window animate_on_visible slide_right_fade_in">
+                                    <li class = "carousel_item falling_fade_in is_displaying">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/rpy_mixing.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/translation_mixing.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/rp_and_height_mixing.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/xy_and_yaw_mixing.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                </ul>
                                 <div class = "media_backing animate_on_visible slide_right_fade_in"></div>
+                                <div class = "carousel_nav_bar">
+                                    <i class="fas fa-chevron-left carousel_prev grow_on_hover highlight_on_hover"></i>
+                                    <i class="fas fa-circle carousel_dot is_displaying"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
+                                    <i class="fas fa-chevron-right carousel_next grow_on_hover highlight_on_hover"></i>
+                                </div>
                             </div>
                             <div class = "text_content_wrapper">
                                 <h2 class = "gradient_text_style_1 animate_on_visible slide_left_fade_in">
@@ -107,24 +138,90 @@
                                 </div>
                             </div>
                         </section>
-                        <section class = "key_feature_section even" id = "key_feature_2_content_wrapper">
-                            <div class = "media_wrapper">
-                                <video class = "feature_video animate_on_visible slide_left_fade_in" width = "320" height = "240" controls>
-                                    <source src="/project_media/project_nak/videos/20180927_220834.mp4" type="video/mp4">
-                                    ERROR: Your browser does not support the video tag!
-                                </video>
-                                <div class = "media_backing animate_on_visible slide_left_fade_in"></div>
+                        <section class = "key_feature_section even">
+                            <div class = "carousel_wrapper">
+                                <ul class = "carousel_window animate_on_visible slide_right_fade_in">
+                                    <li class = "carousel_item falling_fade_in is_displaying">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/tripod_gait.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/ripple_gait.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/variable_tripod.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/variable_ripple.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/tripod_rpy_mixing.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/tripod_translation_mixing.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                </ul>
+                                <div class = "media_backing animate_on_visible slide_right_fade_in"></div>
+                                <div class = "carousel_nav_bar">
+                                    <i class="fas fa-chevron-left carousel_prev grow_on_hover highlight_on_hover"></i>
+                                    <i class="fas fa-circle carousel_dot is_displaying"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
+                                    <i class="fas fa-chevron-right carousel_next grow_on_hover highlight_on_hover"></i>
+                                </div>
                             </div>
                             <div class = "text_content_wrapper">
                                 <h2 class = "gradient_text_style_1 animate_on_visible slide_right_fade_in">
-                                    Real-time Speed Control
+                                    Parameterised Gait Trajectory
                                 </h2>
                                 <div class = "section_text animate_on_visible slide_right_fade_in">
                                     <p>
-                                        The Nak implements variable gait speed through foot trajectory speed modulation. At any point in its trajectory, the speed of each foot can be changed on-the-fly and the foot will fluidly follow through its trajectory at the newly commanded speed. This allows for smooth, non-interruptive, instantaneous changes in gait speed.
+                                        The parameterisation of the foot trajectory during gaits--as opposed to hard-coding a fixed cyclic sequence--enables the Nak to change its gait speed and direction at any point in its motion instantaneously and elegantly without interruption of the trajectory already in motion. It also accomodates fine-tuning swing-to-stance phase ratios on-the-fly, allowing the Nak to change how long feet stay in the air or on the ground during gaits to augment gait stability. The parameterisation is also compatible with the pose transforms, meaning that the Nak can manipulate its body during gaits exactly just it can while stationary.
                                     </p>
-                                    <P>
-                                        This feature is implemented by synchronising all legs to a single cyclic clock implemented as a sinusoidal function operating on an incrementing counter, and controlling the rate of increment of this counter with a throttle; when the throttle is pushed positive, the legs advance in phase, and when pushed negative, the legs regress in phase, while observing their respective phase differences. The xy-displacement of a joy-stick is translated into a vector indicating the direction of the foot's trajectory plane.
+                                    <p>
+                                        Foot trajectory is modelled as a spline along which the foot's x-, y- and z- coordinates vary sinusoidally with respect to an incrementing counter, where the rate of increment is controlled by the degree of throttle from the RC controller, and the direction of the trajectory plane by the direction displacement of the throttle. The incrementing counter behaves as a synchronising clock against which the phases of trajectory of every leg is based on, displaced by their respective phase differences, and modified by their respective phase transformations; when the throttle is pushed positive, the legs advance in phase, and when pushed negative, the legs regress in phase, both moving in the direction of throttle displacement while observing their respective phase modifiers.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class = "key_feature_section odd">
+                            <div class = "media_wrapper">
+                                <video class = "feature_video animate_on_visible slide_right_fade_in" width = "320" height = "240" controls>
+                                    <source src="/project_media/project_nak/videos/passive_muscle_vid.mp4" type="video/mp4">
+                                    ERROR: Your browser does not support the video tag!
+                                </video>
+                                <div class = "media_backing animate_on_visible slide_right_fade_in"></div>
+                            </div>
+                            <div class = "text_content_wrapper">
+                                <h2 class = "gradient_text_style_1 animate_on_visible slide_left_fade_in">
+                                    Passive Muscles
+                                </h2>
+                                <div class = "section_text animate_on_visible slide_left_fade_in">
+                                    <p>
+                                        The servos specify a holding torque of 1.8-2.2kg.cm. The Nak weighs in at 0.737kg, with 45mm femurs and 112mm tibiae. During gaits, especially so the tripod gait, the tibia is largely responsible for providing the majoruty of the locomotive force due to its being the longest segment of each leg. The tibia struggles particularly hard during extension while under load, as most evident from when the Nak strafes laterally during the tripod gait. This is because there is a phase in the gait cycle during which the side opposing the direction of travel of the Nak is supported by only one leg, requiring this solitary limb to provide all the pushing force to move the Nak sidewards.
+                                    </p>
+                                    <p>
+                                        Passive muscles (in the form of hair-ties) were added across the tibia joints to aid the tibia servo in this. The passive muscle exerts its force in the direction of tibia extension, which the tibia servo easily when counters when unloaded. The contribution of the passive muscle increases with tibia flexion, scaling with the torque demands of the tibia joint.
                                     </p>
                                 </div>
                             </div>
@@ -141,7 +238,43 @@
                         </h1>
                         <section id = "retrospect_and_revision_1_content_wrapper" class = "retrospect_and_revision_section">
                             <div class = "header_block">
-                                <i class="fas fa-microchip animate_on_visible slide_right_fade_in"></i>
+                                <i class="fas fa-drumstick-bite animate_on_visible slide_right_fade_in"></i>
+                                <h2 class = "gradient_text_style_1 animate_on_visible slide_left_fade_in">
+                                    Leg Design
+                                </h2>
+                            </div>
+                            <div class = "retrospect_and_revision_section_content_wrapper animate_on_visible rising_fade_in">
+                                <div class = "shortcoming_wrapper">
+                                    <h3 class = "gradient_text_style_1">
+                                        Shortcomings
+                                    </h3>
+                                    <div class = "section_text">
+                                        <p>
+                                            Due to the long tibia and short femur and coxa, the workspace of each leg--thinking of each leg as an RRR manipulator chain--is largely dictated by that of the tibia alone about its own joint. The fact that a single DOF dictates the overall reach of each leg greatly limits the effective workspace of all legs combined. In other words, the feet of the Nak are limited to a relatively restricted spatial range despite the long overall length of the leg. 
+                                        </p>
+                                        <p>
+                                            Admittedly, the legs of the Nak were designed to a proportion that looked cool first before being functionally optimal; the longer tibia was intentional for aesthetic purposes. In my defence, though, this would not have been a problem if the femur and coxa could be made longer. However, in the interests of keeping servo loading minimal, leg segments that are frequently parallel to the ground during loading were intentionally designed to be as short as possible.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class = "upgrade_wrapper">
+                                    <h3 class = "gradient_text_style_1">
+                                        Potential Upgrades
+                                    </h3>
+                                    <div class = "section_text">
+                                        <p>
+                                            Within the constraints of using the same servo motors, the tibia could just simply be made shorter. While that would reduce overall leg workspace, the problem here is not the leg's workspace, but the proportion of the leg's workspace a single segment controls. By making the tibia closer to the length of the other 2 segments, the leg will be more efficient in terms of workspace normalised by leg-length.
+                                        </p>
+                                        <p>
+                                            By opting for beefier servo motors however, the femur and coxa can just be made longer, thereby extending both the workspace of the leg, and its workspace efficiency by leg length.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id = "retrospect_and_revision_2_content_wrapper" class = "retrospect_and_revision_section">
+                            <div class = "header_block">
+                                <i class="fas fa-weight-hanging animate_on_visible slide_right_fade_in"></i>
                                 <h2 class = "gradient_text_style_1 animate_on_visible slide_left_fade_in">
                                     Body Mass
                                 </h2>
@@ -153,7 +286,7 @@
                                     </h3>
                                     <div class = "section_text">
                                         <p>
-                                            The Nak weighs a hefty 0.737kg, making its servos work real hard just to keep its titanic body upright.
+                                            The body of the Nak is the major contributor to its hefty mass, and had to be that large to accomodate the Arduino Mega 2560. The Arduino Mega 2560 was chosen for its large number of pin-change-interrupt (PCINT) capable pins necessary for interfacing with the 2.4GHz receiver's 10 channels. However, its large footprint leaves much to be desired.
                                         </p>
                                     </div>
                                 </div>
@@ -163,37 +296,10 @@
                                     </h3>
                                     <div class = "section_text">
                                         <p>
-                                            As at now, the Teensy 3.6 presents a vastly superior alternative to the Arduino Mega 2560, boasting a clockspeed of a staggering 600MHz. Swapping out for the Teensy 3.6 would mean that the look-up table hack would not be necessary, which would increase IK output precision. That would leave only the I2C bus as the main bottleneck on the gait speed. An added bonus is the dramatic decrease in physical footprint consumed by the micro-controller, allowing for a smaller chassis size.
+                                            At the time of writing this, the Teensy 4.0 presents a far superior option to the Arduino Mega 2560. Not only is it a fraction of the size, it boasts a whopping 600MHz in clockspeed (the Arduino Mega 2560 clocks in at only 16MHz!), and 23 digital pins which are all PCINT-capable! One caveat though: the Teensy 4.0 is exclusively a 3V3 device, with no 5V-tolerant pins. This isn't much of a drawback though, as a transistor-transistor-logic (TTL) converter can handle the conversion between 3V3 and 5V signals with ease.
                                         </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section id = "retrospect_and_revision_2_content_wrapper" class = "retrospect_and_revision_section">
-                            <div class = "header_block">
-                                <i class="fas fa-car-battery animate_on_visible slide_right_fade_in"></i>
-                                <h2 class = "gradient_text_style_1 animate_on_visible slide_left_fade_in">
-                                    Power Source
-                                </h2>
-                            </div>
-                            <div class = "retrospect_and_revision_section_content_wrapper animate_on_visible rising_fade_in">
-                                <div class = "shortcoming_wrapper">
-                                    <h3 class = "gradient_text_style_1">
-                                        Shortcomings
-                                    </h3>
-                                    <div class = "section_text">
                                         <p>
-                                            The current 11.1V 5600mAh flat-pack Li-Po battery is bulky and heavy. It is paramount to keep the body as light as possible, as the torque demand on each joint motor increases proportionally with foot-to-body planar distance. As is, the Nak's MG90 servos are only able to support its own weight within a narrow range of foot-to-body planar distances.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class = "upgrade_wrapper">
-                                    <h3 class = "gradient_text_style_1">
-                                        Potential Upgrades
-                                    </h3>
-                                    <div class = "section_text">
-                                        <p>
-                                            This can be easily resolved by replacing the battery with a 3SXP pack of 18650 Li-ion batteries (where X is any number of parallel sets for more juice). 18650 batteries come in compact cylindrical forms with greater energy density than their flat-pack polymer counterparts. Not only will a pack with an equivalent capacity at the same voltage weigh less, it will also take up less real-estate, affording a smaller chassis size that would grant an even greater weight reduction!
+                                            A TTL converter is capable of converting signals at a frequency of up to 100MHz to 200MHz, depending on quality of construction. Signals coming from the 2.4GHz receiver are 50Hz in frequency, meaning that the TTL converter will contribute no appreciable rising- and falling-edge hysteresis in the signals.
                                         </p>
                                     </div>
                                 </div>
@@ -215,6 +321,7 @@
                 </div>
             </div>
         </div>
+        
         <div id = "background_overlay" class = "parallax_layer_1">
             <div class = "bg_hex_skele_1_wrapper">
                 <svg class = "bg_hex_skele_1_svg animate_on_visible shrinking_fade_in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1707.74 806.64">
@@ -252,4 +359,5 @@
     <script src = "/js/gif_on_hover.js"></script>
     <script src = "/js/highlight_words.js"></script>
     <script src = "/js/scroll_to_top.js"></script>
+    <script src = "/js/media_carousel.js"></script>
 </html>
