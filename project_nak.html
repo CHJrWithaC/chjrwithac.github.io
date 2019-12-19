@@ -91,33 +91,61 @@
                                 <ul class = "carousel_window animate_on_visible slide_right_fade_in">
                                     <li class = "carousel_item falling_fade_in is_displaying">
                                         <video width = "320" height = "240" controls>
-                                            <source src="/project_media/project_nak/videos/rpy_mixing.mp4" type="video/mp4">
+                                            <source src="/project_media/project_nak/videos/trajectory_control.mp4" type="video/mp4">
                                             ERROR: Your browser does not support the video tag!
                                         </video>
                                     </li>
                                     <li class = "carousel_item falling_fade_in">
                                         <video width = "320" height = "240" controls>
-                                            <source src="/project_media/project_nak/videos/translation_mixing.mp4" type="video/mp4">
+                                            <source src="/project_media/project_nak/videos/swing_speed.mp4" type="video/mp4">
                                             ERROR: Your browser does not support the video tag!
                                         </video>
                                     </li>
                                     <li class = "carousel_item falling_fade_in">
                                         <video width = "320" height = "240" controls>
-                                            <source src="/project_media/project_nak/videos/rp_and_height_mixing.mp4" type="video/mp4">
+                                            <source src="/project_media/project_nak/videos/tripod_1.mp4" type="video/mp4">
                                             ERROR: Your browser does not support the video tag!
                                         </video>
                                     </li>
                                     <li class = "carousel_item falling_fade_in">
                                         <video width = "320" height = "240" controls>
-                                            <source src="/project_media/project_nak/videos/xy_and_yaw_mixing.mp4" type="video/mp4">
+                                            <source src="/project_media/project_nak/videos/ripple_1.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/tripod_2.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/ripple_2.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/low_tripod.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/low_ripple.mp4" type="video/mp4">
                                             ERROR: Your browser does not support the video tag!
                                         </video>
                                     </li>
                                 </ul>
                                 <div class = "media_backing animate_on_visible slide_right_fade_in"></div>
-                                <div class = "carousel_nav_bar">
+                                <div class = "carousel_nav_bar animate_on_visible shrinking_fade_in">
                                     <i class="fas fa-chevron-left carousel_prev grow_on_hover highlight_on_hover"></i>
                                     <i class="fas fa-circle carousel_dot is_displaying"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
                                     <i class="fas fa-circle carousel_dot"></i>
                                     <i class="fas fa-circle carousel_dot"></i>
                                     <i class="fas fa-circle carousel_dot"></i>
@@ -126,62 +154,69 @@
                             </div>
                             <div class = "text_content_wrapper">
                                 <h2 class = "gradient_text_style_1 animate_on_visible slide_left_fade_in">
-                                    Real-time Pose Control
+                                    Parameterised Gait Trajectory
                                 </h2>
                                 <div class = "section_text animate_on_visible slide_left_fade_in">
                                     <p>
-                                        The Nak is capable of rolling, pitching and yawing; frontal-planar body translations; stance height and leg adduction/abduction adjustments; and 2 variable gaits--a tripod gait and a 6-step ripple gait--of adjustable speed and peak foot swing height. Each of these manoeuvres are independent, combinable and adjustable in real-time. This is made possible by the usage of volatile variables in the IK algorithm and pin-change interrupts in the control algorithm.
+                                        The parameterisation of the foot trajectory during gaits--as opposed to hard-coding a fixed cyclic sequence--enables the Nak to change its gait speed and direction at any point in its motion instantaneously and elegantly without interruption of the trajectory already in motion. It also accomodates fine-tuning swing-to-stance phase ratios on-the-fly, allowing the Nak to change how long feet stay in the air or on the ground during gaits to augment gait stability. The parameterisation is compatible with the pose transforms, meaning that the Nak can manipulate its body during gaits exactly just it can while stationary.
                                     </p>
                                     <p>
-                                        In broad strokes: each foot of the Nak is modelled to be a point on a circle on the ground, so dubbed the stance circle. The motion of the Nak's body is produced by transforming this stance circle accordingly, making a seemingly complex motion easily effected. During gaits, the foot cycles through its trajectory about this point as its origin. As such, the Nak can maintain any transformed posture even during gaits.
+                                        Foot trajectory is modelled as a spline along which the foot's x-, y- and z- coordinates vary sinusoidally with respect to an incrementing counter, where the rate of increment is controlled by the degree of throttle from the RC controller, and the direction of the trajectory plane by the direction displacement of the throttle. The incrementing counter behaves as a synchronising clock against which the phases of trajectory of every leg is based on, displaced by their respective phase differences, and modified by their respective phase transformations; when the throttle is pushed positive, the legs advance in phase, and when pushed negative, the legs regress in phase, both moving in the direction of throttle displacement while observing their respective phase modifiers.
                                     </p>
                                 </div>
                             </div>
                         </section>
                         <section class = "key_feature_section even">
                             <div class = "carousel_wrapper">
-                                <ul class = "carousel_window animate_on_visible slide_right_fade_in">
+                                <ul class = "carousel_window animate_on_visible slide_left_fade_in">
                                     <li class = "carousel_item falling_fade_in is_displaying">
                                         <video width = "320" height = "240" controls>
-                                            <source src="/project_media/project_nak/videos/tripod_gait.mp4" type="video/mp4">
+                                            <source src="/project_media/project_nak/videos/rpy.mp4" type="video/mp4">
                                             ERROR: Your browser does not support the video tag!
                                         </video>
                                     </li>
                                     <li class = "carousel_item falling_fade_in">
                                         <video width = "320" height = "240" controls>
-                                            <source src="/project_media/project_nak/videos/ripple_gait.mp4" type="video/mp4">
+                                            <source src="/project_media/project_nak/videos/xyz.mp4" type="video/mp4">
                                             ERROR: Your browser does not support the video tag!
                                         </video>
                                     </li>
                                     <li class = "carousel_item falling_fade_in">
                                         <video width = "320" height = "240" controls>
-                                            <source src="/project_media/project_nak/videos/variable_tripod.mp4" type="video/mp4">
+                                            <source src="/project_media/project_nak/videos/rp_and_z.mp4" type="video/mp4">
                                             ERROR: Your browser does not support the video tag!
                                         </video>
                                     </li>
                                     <li class = "carousel_item falling_fade_in">
                                         <video width = "320" height = "240" controls>
-                                            <source src="/project_media/project_nak/videos/variable_ripple.mp4" type="video/mp4">
+                                            <source src="/project_media/project_nak/videos/xy_and_yaw.mp4" type="video/mp4">
                                             ERROR: Your browser does not support the video tag!
                                         </video>
                                     </li>
                                     <li class = "carousel_item falling_fade_in">
                                         <video width = "320" height = "240" controls>
-                                            <source src="/project_media/project_nak/videos/tripod_rpy_mixing.mp4" type="video/mp4">
+                                            <source src="/project_media/project_nak/videos/tripod_rpy.mp4" type="video/mp4">
                                             ERROR: Your browser does not support the video tag!
                                         </video>
                                     </li>
                                     <li class = "carousel_item falling_fade_in">
                                         <video width = "320" height = "240" controls>
-                                            <source src="/project_media/project_nak/videos/tripod_translation_mixing.mp4" type="video/mp4">
+                                            <source src="/project_media/project_nak/videos/tripod_xyz.mp4" type="video/mp4">
+                                            ERROR: Your browser does not support the video tag!
+                                        </video>
+                                    </li>
+                                    <li class = "carousel_item falling_fade_in">
+                                        <video width = "320" height = "240" controls>
+                                            <source src="/project_media/project_nak/videos/ripple_rpy.mp4" type="video/mp4">
                                             ERROR: Your browser does not support the video tag!
                                         </video>
                                     </li>
                                 </ul>
-                                <div class = "media_backing animate_on_visible slide_right_fade_in"></div>
-                                <div class = "carousel_nav_bar">
+                                <div class = "media_backing animate_on_visible slide_left_fade_in"></div>
+                                <div class = "carousel_nav_bar animate_on_visible shrinking_fade_in">
                                     <i class="fas fa-chevron-left carousel_prev grow_on_hover highlight_on_hover"></i>
                                     <i class="fas fa-circle carousel_dot is_displaying"></i>
+                                    <i class="fas fa-circle carousel_dot"></i>
                                     <i class="fas fa-circle carousel_dot"></i>
                                     <i class="fas fa-circle carousel_dot"></i>
                                     <i class="fas fa-circle carousel_dot"></i>
@@ -192,16 +227,17 @@
                             </div>
                             <div class = "text_content_wrapper">
                                 <h2 class = "gradient_text_style_1 animate_on_visible slide_right_fade_in">
-                                    Parameterised Gait Trajectory
+                                    Real-time Pose Control
                                 </h2>
-                                <div class = "section_text animate_on_visible slide_right_fade_in">
+                                <div class = "section_text animate_on_visible slide_left_fade_in">
                                     <p>
-                                        The parameterisation of the foot trajectory during gaits--as opposed to hard-coding a fixed cyclic sequence--enables the Nak to change its gait speed and direction at any point in its motion instantaneously and elegantly without interruption of the trajectory already in motion. It also accomodates fine-tuning swing-to-stance phase ratios on-the-fly, allowing the Nak to change how long feet stay in the air or on the ground during gaits to augment gait stability. The parameterisation is also compatible with the pose transforms, meaning that the Nak can manipulate its body during gaits exactly just it can while stationary.
+                                        The Nak is capable of rolling, pitching and yawing; frontal-planar body translations; stance height and leg adduction/abduction adjustments; and 2 variable gaits--a tripod gait and a 6-step ripple gait--of adjustable speed and peak foot swing height. Each of these manoeuvres are independent, combinable and adjustable in real-time. This is made possible by the usage of volatile variables in the IK algorithm and pin-change interrupts in the control algorithm.
                                     </p>
                                     <p>
-                                        Foot trajectory is modelled as a spline along which the foot's x-, y- and z- coordinates vary sinusoidally with respect to an incrementing counter, where the rate of increment is controlled by the degree of throttle from the RC controller, and the direction of the trajectory plane by the direction displacement of the throttle. The incrementing counter behaves as a synchronising clock against which the phases of trajectory of every leg is based on, displaced by their respective phase differences, and modified by their respective phase transformations; when the throttle is pushed positive, the legs advance in phase, and when pushed negative, the legs regress in phase, both moving in the direction of throttle displacement while observing their respective phase modifiers.
+                                        In broad strokes: each foot of the Nak is modelled to be a point on a circle on the ground, so dubbed the stance circle. The motion of the Nak's body is produced by transforming this stance circle accordingly, making a seemingly complex motion easily effected. During gaits, the foot cycles through its trajectory about this point as its origin. As such, the Nak can maintain any transformed posture even during gaits.
                                     </p>
                                 </div>
+                                
                             </div>
                         </section>
                         <section class = "key_feature_section odd">
