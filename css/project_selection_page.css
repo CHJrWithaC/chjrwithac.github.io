@@ -206,12 +206,12 @@ a {
 
 /*** Media Queries ***/
 
-@media all and (max-width: 1080px) {
+@media all and (max-width: 1920px) {
     html {
-        font-size: 100%;
+        font-size: 80%;
     }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 1366px) {
     html {
         font-size: 62.5%;
     }
