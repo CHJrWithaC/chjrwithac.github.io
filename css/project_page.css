@@ -70,44 +70,45 @@ hr {
     width: 50vw;
 }
 
-/* TODO: You left off here! */
-.read_more_radio {
-    display: none;
-}
+/* Read-more Stuff */
+
 .read_more_button {
     display: flex;
     margin-top: 2em;
     float: right;
 }
-.read_more_button label {
-    cursor: unset;
+.read_more_button p {
     font-size: 1.4em;
+    width: unset !important;
     color: var(--highlight_mid);
-    text-align: left;
-    margin-right: 0.5em;
+    text-align: left !important;
+    margin-top: 0px !important;
+    margin-right: 0.5em !important;
+    margin-left: auto;
 }
-.read_more_icon {
+.read_more_button i {
     display: block !important;
     color: var(--highlight_mid);
     font-size: 1.6em;
     bottom: 0px;
     align-self: center;
 }
-.read_more_radio.collapsed:checked ~ .expand_on_read_more {
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-}
-.read_more_radio.collapsed:checked ~ .read_more_button.collapse {
+.read_more_button.expand.expanded {
     display: none !important;
 }
-.read_more_radio.expanded:checked ~ .expand_on_read_more {
-    max-height: 100vh;
+.read_more_button.collapse {
+    display: none;
+}
+.read_more_button.collapse.expanded {
+    display: flex !important;
+}
+.expand_on_read_more {
+    max-height: 0px;
     overflow: hidden;
     transition: max-height 0.5s ease-in;
 }
-.read_more_radio.expanded:checked ~ .read_more_button.expand {
-    display: none;
+.expand_on_read_more.expanded {
+    max-height: 100vh !important;
 }
 
 /*** Parallax layers ***/
