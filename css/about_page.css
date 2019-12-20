@@ -107,3 +107,16 @@ p {
 #splash_background_wrapper svg path {
     stroke: var(--highlight_mid);
 }
+
+/*** Media Queries ***/
+
+@media all and (max-width: 1080px) {
+    html {
+        font-size: 100%;
+    }
+}
+@media all and (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+}

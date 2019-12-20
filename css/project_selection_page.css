@@ -203,3 +203,16 @@ a {
 .bg_hex_full_wrapper svg path {
     fill: var(--dark_base);
 }
+
+/*** Media Queries ***/
+
+@media all and (max-width: 1080px) {
+    html {
+        font-size: 100%;
+    }
+}
+@media all and (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+}
