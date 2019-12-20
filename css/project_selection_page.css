@@ -173,21 +173,33 @@ a {
     padding: 0px;
     width: 100vw;
     height: 100vh;
+    
     z-index: -1 !important;
 }
-.bg_hex_skele_1_wrapper {
+.bg_hex_skele_wrapper {
     position: relative;
+    opacity: 0.1;
     height: 100vh;
     display: grid;
     align-content: center;
 }
-.bg_hex_skele_1_svg path {
-    fill: var(--dark_base);
+.bg_hex_skele_wrapper svg {
+    width: 100vw;
 }
-.bg_hex_full_1_wrapper {
+.bg_hex_skele_wrapper svg path {
+    stroke: var(--highlight_mid);
+}
+.bg_hex_skele_wrapper svg ellipse {
+    fill: var(--highlight_mid);
+    stroke: var(--highlight_mid);
+}
+.bg_hex_full_wrapper {
     position: relative;
-    opacity: 1;
+    opacity: 0.2;
 }
-.bg_hex_full_1_svg path {
+.bg_hex_full_wrapper svg {
+    width: 100vw;
+}
+.bg_hex_full_wrapper svg path {
     fill: var(--dark_base);
 }

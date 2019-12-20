@@ -82,10 +82,7 @@ p {
     justify-content: center;
 }
 #splash_image_wrapper svg {
-    opacity: 0.2;
-}
-#splash_background_wrapper svg {
-    opacity: 0.3;
+    opacity: 0.1;
 }
 #splash_image_wrapper svg, #splash_background_wrapper svg{
     position: absolute;
@@ -98,6 +95,15 @@ p {
 #splash_image_wrapper #splash_image_svg ellipse {
     fill: var(--dark_mid);
 }
-#bg_hex_skele_1_svg path {
-    fill: var(--highlight_base);
+#splash_background_wrapper svg {
+    opacity: 0.1;
+    width: 100vw;
+    height: auto;
+}
+#splash_background_wrapper svg ellipse {
+    fill: var(--highlight_mid);
+    stroke: var(--highlight_mid);
+}
+#splash_background_wrapper svg path {
+    stroke: var(--highlight_mid);
 }

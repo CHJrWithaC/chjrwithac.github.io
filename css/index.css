@@ -35,6 +35,8 @@ body {
     scroll-behavior: smooth;
 }
 
+/*** Content ***/
+
 #foreground {
     position: absolute;
     height: 100vh;
@@ -89,6 +91,8 @@ body {
     bottom: 0px;
 }
 
+/*** Background ***/
+
 #background {
     z-index: -1;
 }
@@ -102,9 +106,6 @@ body {
 #splash_image_wrapper svg {
     opacity: 0.2;
 }
-#splash_background_wrapper svg {
-    opacity: 0.3;
-}
 #splash_image_wrapper svg, #splash_background_wrapper svg{
     position: absolute;
     align-self: center;
@@ -116,6 +117,15 @@ body {
 #splash_image_wrapper #splash_image_svg ellipse {
     fill: var(--dark_mid);
 }
-#bg_hex_skele_1_svg path {
-    fill: var(--highlight_base);
+#splash_background_wrapper svg {
+    opacity: 0.15;
+    width: 100vw;
+    height: auto;
+}
+#splash_background_wrapper svg ellipse {
+    fill: var(--highlight_mid);
+    stroke: var(--highlight_mid);
+}
+#splash_background_wrapper svg path {
+    stroke: var(--highlight_mid);
 }
