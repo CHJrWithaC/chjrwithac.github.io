@@ -1,0 +1,140 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css?family=Aldrich|Megrim|Offside|Syncopate:400,700&display=swap');
+
+/* Custom Imports */
+@import url("/css/yellow_colour_palette.css");
+@import url("/css/global_text_format_1.css");
+@import url("/css/custom_scrollbar_1.css");
+@import url("/css/nav_bar.css");
+@import url("/css/animations_on_hover.css");
+@import url("/css/animations_on_visible.css");
+@import url("/css/footer.css");
+
+html {
+    height: 100%;
+    font-family: "Aldrich";
+    font-size: 62.5%;
+
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    background-color: var(--background_colour);
+    background-size: 100vw 100vh;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    display: table;
+    text-align: left;
+    width: unset;
+    margin-bottom: 10vh;
+}
+p {
+    margin-top: 3em;
+}
+a {
+    text-decoration: none;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+#foreground {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+/* Content */
+
+#content_wrapper {
+    display: block;
+    position: relative;
+    margin-left: 10vw;
+    margin-top: 30vh;
+    width: 60vw;
+}
+.contact_item_link_wrapper {
+    cursor: unset;
+    display: block;
+    width: 20em;
+}
+.contact_item_link_wrapper + .contact_item_link_wrapper {
+    margin-top: 1em;
+}
+.contact_item {
+    display: grid;
+    grid-template: "icon label" / 4em auto;
+    grid-row-gap: 10em;
+    width: inherit;
+}
+.contact_item:hover {
+    cursor: pointer;
+}
+.contact_item i {
+    grid-area: icon;
+    align-self: center;
+    color: var(--highlight_base);
+    font-size: 4em;
+}
+.contact_item p {
+    grid-area: label;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    margin-left: 2em;
+    color: var(--highlight_base);
+}
+
+
+/*** Footer ***/
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+/*** Background ***/
+
+#background {
+    z-index: -1;
+}
+#splash_image_wrapper, #splash_background_wrapper{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+#splash_image_wrapper svg {
+    opacity: 0.2;
+}
+#splash_background_wrapper svg {
+    opacity: 0.3;
+}
+#splash_image_wrapper svg, #splash_background_wrapper svg{
+    position: absolute;
+    align-self: center;
+    height: 90vh;
+    width: auto;
+}
+#splash_image_wrapper #splash_image_svg path,
+#splash_image_wrapper #splash_image_svg rect,
+#splash_image_wrapper #splash_image_svg ellipse {
+    fill: var(--dark_mid);
+}
+#bg_hex_skele_1_svg path {
+    fill: var(--highlight_base);
+}

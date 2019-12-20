@@ -1,0 +1,9 @@
+:root {
+    /* Red Dark Theme */
+    --highlight_base: rgb(255, 30, 30);
+    --highlight_mid: rgb(255, 41, 41);
+    --highlight_bright: rgb(255, 97, 97);
+    --dark_base: rgb(68, 0, 0);
+    --dark_mid: #770000;
+    --background_colour: #040404;
+}

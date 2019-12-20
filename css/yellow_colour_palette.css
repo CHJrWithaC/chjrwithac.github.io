@@ -1,0 +1,9 @@
+:root {
+    /* Yellow Dark Theme */
+    --highlight_base: rgb(255, 196, 0);
+    --highlight_mid: rgb(255, 221, 28);
+    --highlight_bright: rgb(252, 255, 97);
+    --dark_base: rgb(68, 41, 0);
+    --dark_mid: #774700;
+    --background_colour: #040404;
+}
