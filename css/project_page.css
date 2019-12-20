@@ -37,7 +37,7 @@ body {
     perspective: 1px;
     transform-style: preserve-3d;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
@@ -70,6 +70,30 @@ hr {
     width: 50vw;
 }
 
+/* TODO: You left off here! */
+.read_more_button {
+    display: flex;
+    margin-top: 2em;
+    /* justify-content: center; */
+    float: right;
+}
+.read_more_button p {
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0.5em !important;
+    text-align: left;
+    color: var(--highlight_mid);
+    width: unset !important;
+}
+.expand_on_read_more {
+    display: none;
+}
+.read_more_icon {
+    color: var(--highlight_mid);
+    font-size: 1.6em;
+}
+
+
 /*** Parallax layers ***/
 
 .parallax_layer_1 {
@@ -85,7 +109,7 @@ hr {
 
 #foreground {
     position: absolute;
-    z-index: 0;
+    z-index: 0 !important;
     background: none;
 }
 
@@ -496,6 +520,7 @@ hr {
     padding: 0px;
     width: 100vw;
     height: 100vh;
+    
     z-index: -1 !important;
 }
 .bg_hex_skele_1_wrapper {

@@ -9,6 +9,9 @@
         <title>TBW - Project Nak</title>
     </head>
     <body>
+        <div id = "loading_screen">
+            <!-- Images here -->
+        </div>
         <div id = "foreground">
             <div id = "nav_bar" class = "animate_on_visible falling_fade_in">
                 <!-- Included from nav_bar.html -->
@@ -160,7 +163,13 @@
                                     <p>
                                         The parameterisation of the foot trajectory during gaits--as opposed to hard-coding a fixed cyclic sequence--enables the Nak to change its gait speed and direction at any point in its motion instantaneously and elegantly without interruption of the trajectory already in motion. It also accomodates fine-tuning swing-to-stance phase ratios on-the-fly, allowing the Nak to change how long feet stay in the air or on the ground during gaits to augment gait stability. The parameterisation is compatible with the pose transforms, meaning that the Nak can manipulate its body during gaits exactly just it can while stationary.
                                     </p>
-                                    <p>
+                                    <div class = "read_more_button">
+                                        <p>
+                                            Read more
+                                        </p>
+                                        <i class="fas fa-chevron-down read_more_icon"></i>
+                                    </div>
+                                    <p class = "expand_on_read_more">
                                         Foot trajectory is modelled as a spline along which the foot's x-, y- and z- coordinates vary sinusoidally with respect to an incrementing counter, where the rate of increment is controlled by the degree of throttle from the RC controller, and the direction of the trajectory plane by the direction displacement of the throttle. The incrementing counter behaves as a synchronising clock against which the phases of trajectory of every leg is based on, displaced by their respective phase differences, and modified by their respective phase transformations; when the throttle is pushed positive, the legs advance in phase, and when pushed negative, the legs regress in phase, both moving in the direction of throttle displacement while observing their respective phase modifiers.
                                     </p>
                                 </div>
