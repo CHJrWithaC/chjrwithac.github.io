@@ -74,9 +74,25 @@
                                 <p>
                                     All mechanical structures on the Nak are 3D-printed in black PLA. Each leg has 3-DOFs, and each joint is actuated by an MG90 TowerPro servo motor. An Arduino Mega 2560 interfaces with the 18 servo motors through 2 PCA9685 PWM drivers over an I2C bus. Power is supplied through an umbilical cable from a bench power supply, directly powering the Arduino Mega, and through a 12V-to-5V buck converter a 2.4GHz RC receiver module and the 2 PWM drivers.
                                 </p>
-                                <p>
-                                    Initial algorithms were drafted in MATLAB and simulated in VREP. MATLAB was used for its ability to calculate matrix exponents and logarithms, allowing me to employ spatial transforms in Plucker coordinates as a secondary method to check the behaviour of the algorithms. These concepts were subsequently coded into the Arduino.
-                                </p>
+                                <input type = "radio" name = "read_more_0" class = "read_more_radio expanded" id = "read_more_radio_0_expanded">
+                                <input type = "radio" name = "read_more_0" class = "read_more_radio collapsed" id = "read_more_radio_0_collapsed" checked = "checked">
+                                <div class = "expand_on_read_more">
+                                    <p>
+                                        Initial algorithms were drafted in MATLAB and simulated in VREP. MATLAB was used for its ability to calculate matrix exponents and logarithms, allowing me to employ spatial transforms in Plucker coordinates as a secondary method to check the behaviour of the algorithms. These concepts were subsequently coded into the Arduino.
+                                    </p>
+                                </div>
+                                <div class = "read_more_button expand grow_on_hover highlight_on_hover">
+                                    <label for = "read_more_radio_0_expanded">
+                                        Read more
+                                    </label>
+                                    <i class="fas fa-chevron-down read_more_icon"></i>
+                                </div>
+                                <div class = "read_more_button collapse grow_on_hover highlight_on_hover">
+                                    <label for = "read_more_radio_0_collapsed">
+                                        Read more
+                                    </label>
+                                    <i class="fas fa-chevron-up read_more_icon"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -163,15 +179,25 @@
                                     <p>
                                         The parameterisation of the foot trajectory during gaits--as opposed to hard-coding a fixed cyclic sequence--enables the Nak to change its gait speed and direction at any point in its motion instantaneously and elegantly without interruption of the trajectory already in motion. It also accomodates fine-tuning swing-to-stance phase ratios on-the-fly, allowing the Nak to change how long feet stay in the air or on the ground during gaits to augment gait stability. The parameterisation is compatible with the pose transforms, meaning that the Nak can manipulate its body during gaits exactly just it can while stationary.
                                     </p>
-                                    <div class = "read_more_button">
+                                    <input type = "radio" name = "read_more_1" class = "read_more_radio expanded" id = "read_more_radio_1_expanded">
+                                    <input type = "radio" name = "read_more_1" class = "read_more_radio collapsed" id = "read_more_radio_1_collapsed" checked = "checked">
+                                    <div class = "expand_on_read_more">
                                         <p>
-                                            Read more
+                                            Foot trajectory is modelled as a spline along which the foot's x-, y- and z- coordinates vary sinusoidally with respect to an incrementing counter, where the rate of increment is controlled by the degree of throttle from the RC controller, and the direction of the trajectory plane by the direction displacement of the throttle. The incrementing counter behaves as a synchronising clock against which the phases of trajectory of every leg is based on, displaced by their respective phase differences, and modified by their respective phase transformations; when the throttle is pushed positive, the legs advance in phase, and when pushed negative, the legs regress in phase, both moving in the direction of throttle displacement while observing their respective phase modifiers.
                                         </p>
+                                    </div>
+                                    <div class = "read_more_button expand grow_on_hover highlight_on_hover">
+                                        <label for = "read_more_radio_1_expanded">
+                                            Read more
+                                        </label>
                                         <i class="fas fa-chevron-down read_more_icon"></i>
                                     </div>
-                                    <p class = "expand_on_read_more">
-                                        Foot trajectory is modelled as a spline along which the foot's x-, y- and z- coordinates vary sinusoidally with respect to an incrementing counter, where the rate of increment is controlled by the degree of throttle from the RC controller, and the direction of the trajectory plane by the direction displacement of the throttle. The incrementing counter behaves as a synchronising clock against which the phases of trajectory of every leg is based on, displaced by their respective phase differences, and modified by their respective phase transformations; when the throttle is pushed positive, the legs advance in phase, and when pushed negative, the legs regress in phase, both moving in the direction of throttle displacement while observing their respective phase modifiers.
-                                    </p>
+                                    <div class = "read_more_button collapse grow_on_hover highlight_on_hover">
+                                        <label for = "read_more_radio_1_collapsed">
+                                            Read more
+                                        </label>
+                                        <i class="fas fa-chevron-up read_more_icon"></i>
+                                    </div>
                                 </div>
                             </div>
                         </section>
@@ -242,9 +268,25 @@
                                     <p>
                                         The Nak is capable of rolling, pitching and yawing; frontal-planar body translations; stance height and leg adduction/abduction adjustments; and 2 variable gaits--a tripod gait and a 6-step ripple gait--of adjustable speed and peak foot swing height. Each of these manoeuvres are independent, combinable and adjustable in real-time. This is made possible by the usage of volatile variables in the IK algorithm and pin-change interrupts in the control algorithm.
                                     </p>
-                                    <p>
-                                        In broad strokes: each foot of the Nak is modelled to be a point on a circle on the ground, so dubbed the stance circle. The motion of the Nak's body is produced by transforming this stance circle accordingly, making a seemingly complex motion easily effected. During gaits, the foot cycles through its trajectory about this point as its origin. As such, the Nak can maintain any transformed posture even during gaits.
-                                    </p>
+                                    <input type = "radio" name = "read_more_2" class = "read_more_radio expanded" id = "read_more_radio_2_expanded">
+                                    <input type = "radio" name = "read_more_2" class = "read_more_radio collapsed" id = "read_more_radio_2_collapsed" checked = "checked">
+                                    <div class = "expand_on_read_more">
+                                        <p>
+                                            In broad strokes: each foot of the Nak is modelled to be a point on a circle on the ground, so dubbed the stance circle. The motion of the Nak's body is produced by transforming this stance circle accordingly, making a seemingly complex motion easily effected. During gaits, the foot cycles through its trajectory about this point as its origin. As such, the Nak can maintain any transformed posture even during gaits.
+                                        </p>
+                                    </div>
+                                    <div class = "read_more_button expand grow_on_hover highlight_on_hover">
+                                        <label for = "read_more_radio_2_expanded">
+                                            Read more
+                                        </label>
+                                        <i class="fas fa-chevron-down read_more_icon"></i>
+                                    </div>
+                                    <div class = "read_more_button collapse grow_on_hover highlight_on_hover">
+                                        <label for = "read_more_radio_2_collapsed">
+                                            Read more
+                                        </label>
+                                        <i class="fas fa-chevron-up read_more_icon"></i>
+                                    </div>
                                 </div>
                                 
                             </div>
@@ -265,9 +307,25 @@
                                     <p>
                                         The servos specify a holding torque of 1.8-2.2kg.cm. The Nak weighs in at 0.737kg, with 45mm femurs and 112mm tibiae. During gaits, especially so the tripod gait, the tibia is largely responsible for providing the majoruty of the locomotive force due to its being the longest segment of each leg. The tibia struggles particularly hard during extension while under load, as most evident from when the Nak strafes laterally during the tripod gait. This is because there is a phase in the gait cycle during which the side opposing the direction of travel of the Nak is supported by only one leg, requiring this solitary limb to provide all the pushing force to move the Nak sidewards.
                                     </p>
-                                    <p>
-                                        Passive muscles (in the form of hair-ties) were added across the tibia joints to aid the tibia servo in this. The passive muscle exerts its force in the direction of tibia extension, which the tibia servo easily when counters when unloaded. The contribution of the passive muscle increases with tibia flexion, scaling with the torque demands of the tibia joint.
-                                    </p>
+                                    <input type = "radio" name = "read_more_3" class = "read_more_radio expanded" id = "read_more_radio_3_expanded">
+                                    <input type = "radio" name = "read_more_3" class = "read_more_radio collapsed" id = "read_more_radio_3_collapsed" checked = "checked">
+                                    <div class = "expand_on_read_more">
+                                        <p>
+                                            Passive muscles (in the form of hair-ties) were added across the tibia joints to aid the tibia servo in this. The passive muscle exerts its force in the direction of tibia extension, which the tibia servo easily when counters when unloaded. The contribution of the passive muscle increases with tibia flexion, scaling with the torque demands of the tibia joint.
+                                        </p>
+                                    </div>
+                                    <div class = "read_more_button expand grow_on_hover highlight_on_hover">
+                                        <label for = "read_more_radio_3_expanded">
+                                            Read more
+                                        </label>
+                                        <i class="fas fa-chevron-down read_more_icon"></i>
+                                    </div>
+                                    <div class = "read_more_button collapse grow_on_hover highlight_on_hover">
+                                        <label for = "read_more_radio_3_collapsed">
+                                            Read more
+                                        </label>
+                                        <i class="fas fa-chevron-up read_more_icon"></i>
+                                    </div>
                                 </div>
                             </div>
                         </section>

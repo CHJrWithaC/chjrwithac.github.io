@@ -71,28 +71,44 @@ hr {
 }
 
 /* TODO: You left off here! */
+.read_more_radio {
+    display: none;
+}
 .read_more_button {
     display: flex;
     margin-top: 2em;
-    /* justify-content: center; */
     float: right;
 }
-.read_more_button p {
-    margin-top: 0px !important;
-    margin-left: 0px !important;
-    margin-right: 0.5em !important;
-    text-align: left;
+.read_more_button label {
+    cursor: unset;
+    font-size: 1.4em;
     color: var(--highlight_mid);
-    width: unset !important;
-}
-.expand_on_read_more {
-    display: none;
+    text-align: left;
+    margin-right: 0.5em;
 }
 .read_more_icon {
+    display: block !important;
     color: var(--highlight_mid);
     font-size: 1.6em;
+    bottom: 0px;
+    align-self: center;
 }
-
+.read_more_radio.collapsed:checked ~ .expand_on_read_more {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+.read_more_radio.collapsed:checked ~ .read_more_button.collapse {
+    display: none !important;
+}
+.read_more_radio.expanded:checked ~ .expand_on_read_more {
+    max-height: 100vh;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in;
+}
+.read_more_radio.expanded:checked ~ .read_more_button.expand {
+    display: none;
+}
 
 /*** Parallax layers ***/
 
@@ -206,6 +222,7 @@ hr {
     grid-template: "cad content_text" / 5fr 4fr;
     grid-column-gap: 5vw;
 }
+
 #design_overview_band_content_wrapper #media_wrapper {
     grid-area: cad;
     justify-self: end;
@@ -223,9 +240,11 @@ hr {
 }
 #design_overview_band_content_wrapper #text_content_wrapper h1 {
     margin: 0px;
+    margin-bottom: 10vh;
 }
 #design_overview_band_content_wrapper #text_content_wrapper p {
     text-align: center;
+    margin-top: 2em;
 }
 
 /*** In Action Band ***/

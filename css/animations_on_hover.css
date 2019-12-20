@@ -16,6 +16,7 @@ eg.
     cursor: pointer;
 }
 .highlight_on_hover,
+.highlight_on_hover label,
 .highlight_on_hover p,
 .highlight_on_hover a,
 .highlight_on_hover path,
@@ -29,6 +30,7 @@ eg.
     transition: all 0.2s ease-out;
 }
 .highlight_on_hover:hover,
+.highlight_on_hover:hover label,
 .highlight_on_hover:hover p,
 .highlight_on_hover:hover a,
 .highlight_on_hover:hover path,
@@ -41,5 +43,5 @@ eg.
 .highlight_on_hover:hover svg polygon {
     color: var(--highlight_bright) !important;
     fill: var(--highlight_bright) !important;
-    cursor: pointer;
+    cursor: pointer !important;
 }
