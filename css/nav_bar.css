@@ -14,7 +14,7 @@ Requires:
 
 #nav_bar {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     width: 100vw;
     height: 8vh;
     padding-top: 1em;
@@ -59,10 +59,96 @@ Requires:
     align-items: center;
     margin-left: auto;
     list-style: none;
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
 }
 #nav_bar_list li a {
     text-decoration: none;
     font-family: "Aldrich";
     font-size: 1.6em;
     color: var(--highlight_base);
+}
+
+#menu_icon_wrapper {
+    position: absolute;
+    display: none;
+    font-size: 3em;
+    z-index: 4;
+    align-self: center;
+    right: 0px;
+    margin-right: 5vw;
+    cursor: pointer;
+}
+#menu_icon_wrapper i {
+    color: var(--highlight_base);
+}
+#back_icon_wrapper {
+    position: absolute;
+    display: none;
+    font-size: 3em;
+    z-index: 4;
+    align-self: center;
+    right: 0px;
+    margin-right: 5vw;
+    cursor: pointer;
+}
+#back_icon_wrapper i {
+    color: var(--highlight_base);
+}
+
+
+
+@media all and (max-width: 2000px) {
+}
+@media all and (max-width: 1400px) {
+}
+@media all and (max-width: 800px) {
+    
+    #logo_wrapper #logo_svg {
+        justify-self: center;
+        align-self: center;
+        height: 6em;
+        width: auto;
+    }
+    #menu_icon_wrapper {
+        display: block;
+        visibility: visible;
+    }
+    #back_icon_wrapper {
+        display: block;
+        visibility: hidden;
+    }
+    #nav_bar_list {
+        position: fixed;
+        justify-content: start;
+        top: 0px;
+        background: #000000;
+        flex-direction: column;
+
+        visibility: hidden;
+        overflow-y: hidden;
+        width: 100vw;
+        height: 0px;
+        transition: height 0.5s ease-out, visibility 0.5s ease-out;
+    }
+    #nav_bar_list li {
+        margin-top: 10vh;
+        font-size: 1.6em;
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+    }
+    /* Upon click of the nav icon, attach class .opened */
+    #nav_bar_list.opened {
+        visibility: visible;
+        height: 100vh;
+    }
+    #nav_bar_list.opened li {
+        opacity: 1 !important;
+    }
+    #menu_icon_wrapper.opened {
+        visibility: hidden;
+    }
+    #back_icon_wrapper.opened {
+        visibility: visible;
+    }
 }

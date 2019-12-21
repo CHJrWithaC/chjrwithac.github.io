@@ -605,11 +605,8 @@ hr {
         z-index: 1;
     }
     #splash_band_content_wrapper #project_title_block {
-        position: absolute;
         left: unset;
         margin-left: -20vw;
-        top: 10em;
-        z-index: 2;
     }
     #splash_band_content_wrapper #project_subtitle {
         width: 60vw;
