@@ -1,0 +1,110 @@
+
+/*** Loading Screen ***/
+
+@keyframes loading_hex_move_1 {
+    0% { transform: translateX(0px) translateY(0px);}
+    25% { transform: translateX(60px) translateY(52px) scale(2) rotate(30deg);}
+    50% { transform: translateX(0px) translateY(0px) scale(0.8) rotate(60deg);}
+    75% {  }
+    100% { transform: rotate(120deg);}
+}
+@keyframes loading_hex_move_2 {
+    0% { transform: translateX(0px) translateY(0px); }
+    25% { transform: translateX(-60px) translateY(52px) scale(2) rotate(30deg);}
+    50% { transform: translateX(0px) translateY(0px) scale(0.8) rotate(60deg);}
+    75% { }
+    100% { transform: rotate(120deg);}
+}
+@keyframes loading_hex_move_3 {
+    0% { transform: translateX(0px) translateY(0px); }
+    25% { transform: translateX(0px) translateY(-52px) scale(2) rotate(30deg);}
+    50% { transform: translateX(0px) translateY(0px) scale(0.8) rotate(60deg);}
+    75% { }
+    100% { transform: rotate(120deg);}
+}
+@keyframes loading_hex_colour_1 {
+    0% { stroke: var(--highlight_base); }
+    25% { stroke: var(--highlight_bright);}
+    50% { stroke: var(--highlight_mid);}
+    75% { stroke: var(--dark_mid);}
+    100% { stroke: var(--dark_base);}
+}
+@keyframes loading_hex_colour_2 {
+    0% { stroke: var(--dark_base);}
+    25% { stroke: var(--highlight_base);}
+    50% { stroke: var(--highlight_bright);}
+    75% { stroke: var(--highlight_mid);}
+    100% { stroke: var(--dark_mid);}
+}
+@keyframes loading_hex_colour_3 {
+    0% { stroke: var(--dark_mid);}
+    25% { stroke: var(--dark_base);}
+    50% { stroke: var(--highlight_base);}
+    75% { stroke: var(--highlight_bright);}
+    100% { stroke: var(--highlight_mid);}
+}
+
+#loading_screen {
+    z-index: 3;
+    background: #000000;
+    visibility: visible;
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+#loading_screen .hex_loader_wrapper {
+    position: absolute;
+    display: table;
+    left: 45%;
+    top: 45%;
+    width: unset;
+}
+#loading_screen .hex_loader_wrapper.first {
+    -webkit-animation-name: loading_hex_move_1;
+    -webkit-animation-duration: 2s;
+    animation-name: loading_hex_move_1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+#loading_screen .hex_loader_wrapper.first svg path {
+    -webkit-animation-name: loading_hex_colour_1;
+    -webkit-animation-duration: 1s;
+    animation-name: loading_hex_colour_1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+#loading_screen .hex_loader_wrapper.second {
+    -webkit-animation-name: loading_hex_move_2;
+    -webkit-animation-duration: 2s;
+    animation-name: loading_hex_move_2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+#loading_screen .hex_loader_wrapper.second svg path {
+    -webkit-animation-name: loading_hex_colour_2;
+    -webkit-animation-duration: 2s;
+    animation-name: loading_hex_colour_2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+#loading_screen .hex_loader_wrapper.third {
+    -webkit-animation-name: loading_hex_move_3;
+    -webkit-animation-duration: 2s;
+    animation-name: loading_hex_move_3;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+#loading_screen .hex_loader_wrapper.third svg path {
+    -webkit-animation-name: loading_hex_colour_3;
+    -webkit-animation-duration: 3s;
+    animation-name: loading_hex_colour_3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+#loading_screen.loading_complete {
+    visibility: hidden;
+    opacity: 0 !important;
+}

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Aldrich|Megrim|Offside|Syncopate:400,700&display=swap');
 
 /* Custom Imports */
+@import url("/css/loading_screen.css");
 @import url("/css/purple_colour_palette.css");
 @import url("/css/global_text_format_1.css");
 @import url("/css/custom_scrollbar_1.css");
@@ -42,6 +43,7 @@ body {
 img {
     height: auto;
     width: 100%;
+    filter: brightness(1.5);
 }
 
 a {

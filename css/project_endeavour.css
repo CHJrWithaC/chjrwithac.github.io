@@ -1,3 +1,7 @@
 @import url("/css/project_page.css");
 
 @import url("/css/red_colour_palette.css");
+
+#media_wrapper {
+    filter: brightness(1.5)
+}
