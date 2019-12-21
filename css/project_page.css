@@ -10,6 +10,7 @@
 @import url("/css/animations_on_visible.css");
 @import url("/css/nav_bar.css");
 @import url("/css/footer.css");
+@import url("/css/global_responsive_vars.css");
 
 :root {
     --global_video_width: 40vw;
@@ -268,10 +269,9 @@ hr {
 #in_action_media_wrapper #in_action_media_backing {
     position: absolute;
     background: linear-gradient(90deg,var(--highlight_mid) 7.55%, rgba(0, 0, 0, 0) 100%);
-    opacity: 0.5;
     width: 55vw;
     height: calc((50vw / 16) * 9);
-    margin-top: 5vh;
+    margin-top: 2vh;
     z-index: 0;
 }
 
@@ -310,6 +310,7 @@ hr {
 .key_feature_label {
     grid-area: label;
     margin-top: 2vh;
+    text-align: center;
 }
 
 .key_feature_section {
@@ -425,6 +426,10 @@ hr {
 
 /* Key Feature Single Media */
 
+
+.key_feature_section {
+    width: 100vw;
+}
 .key_feature_section .media_wrapper {
     position: relative;
     grid-area: media;
@@ -439,7 +444,6 @@ hr {
 .key_feature_section .media_wrapper .media_backing {
     position: relative;
     background: var(--highlight_base);
-    opacity: 0.5;
     width: var(--global_video_width);
     height: calc((var(--global_video_width) / 16) * 9);
     margin-top: 3vh;
@@ -571,15 +575,144 @@ hr {
     fill: var(--dark_base);
 }
 
-/*** Media Queries ***/
+/*** Specific Media Queries ***/
 
-@media all and (max-width: 1920px) {
+@media all and (max-width: 2000px) {
     html {
-        font-size: 80%;
+        font-size: var(--font_size_below_2000);
     }
 }
-@media all and (max-width: 1366px) {
+@media all and (max-width: 1400px) {
     html {
-        font-size: 62.5%;
+        font-size: var(--font_size_below_1400);
+    }
+}
+@media all and (max-width: 800px) {
+    
+    :root {
+        --global_video_width: 80vw;
+    }
+    html {
+        font-size: var(--font_size_below_800);
+    }
+    .section_text p {
+        width: 80vw;
+    }
+    #splash_band_content_wrapper #render_wrapper {
+        top: -20vw;
+        left: -40vw;
+        width: 80vw;
+        z-index: 1;
+    }
+    #splash_band_content_wrapper #project_title_block {
+        position: absolute;
+        left: unset;
+        margin-left: -20vw;
+        top: 10em;
+        z-index: 2;
+    }
+    #splash_band_content_wrapper #project_subtitle {
+        width: 60vw;
+        min-width: 10em;
+    
+    }
+    #splash_band_content_wrapper #project_title {
+        font-size: 5em;
+    }
+    #splash_band_content_wrapper #project_title_suffix {
+        font-size: 3em;
+    }
+    #design_overview_band_content_wrapper {
+        grid-template: "cad" "content_text";
+        grid-column-gap: 5vw;
+    }
+    #design_overview_band_content_wrapper #media_wrapper {
+        justify-self: center;
+    }
+    #design_overview_band_content_wrapper #text_content_wrapper {
+        justify-self: center;
+        width: 80vw;
+    }
+    #design_overview_band_content_wrapper #text_content_wrapper h1 {
+        margin-top: 0.5em;
+        margin-bottom: 0px;
+    }
+    #design_overview_band_content_wrapper #media_wrapper #explosion_gif {
+        width: 80vw;
+    }
+
+    #in_action_media_wrapper video {
+        width: var(--global_video_width);
+    }
+    #in_action_media_wrapper #in_action_media_backing {
+        width: var(--global_video_width);
+        margin-left: -3vw;
+        height: calc(var(--global_video_width)/16*9);
+    }
+
+    #key_features_banner {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+        
+    .key_feature_section.odd {
+        grid-template: "media" "content_text";
+    }
+    .key_feature_section.even {
+        grid-template: "media" "content_text";
+    }
+    .key_feature_section.odd .media_wrapper {
+        justify-self: center;
+    }
+    .key_feature_section.even .media_wrapper {
+        justify-self: center;
+    }
+    .key_feature_section .media_wrapper .media_backing {
+        margin-top: 1.5vw;
+    }
+    .key_feature_section.odd .carousel_wrapper {
+        justify-self: center;
+    }
+    .key_feature_section.even .carousel_wrapper {
+        justify-self: center;
+    }
+    .key_feature_section .carousel_wrapper .media_backing {
+        margin-top: 1.5vw;
+    }
+    .key_feature_section.odd .text_content_wrapper {
+        justify-self: center;
+        width: 80vw;
+        margin-top: 5em;
+    }
+    .key_feature_section.even .text_content_wrapper {
+        justify-self: center;
+        width: 80vw;
+        margin-top: 5em;
+    }
+    .key_feature_section.odd .text_content_wrapper p {
+        width: unset;
+    }
+    .key_feature_section.even .text_content_wrapper p {
+        width: unset;
+    }
+    .carousel_nav_bar {
+        margin-top: 3vw;
+    }
+
+    .retrospect_and_revision_section_content_wrapper {
+        grid-template: "shortcoming" "upgrade";
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .retrospect_and_revision_section_content_wrapper .section_text p {
+        width: unset;
+    }
+    .shortcoming_wrapper {
+        justify-self: center;
+    }
+    .upgrade_wrapper {
+        justify-self: center;
     }
 }

@@ -9,6 +9,7 @@
 @import url("/css/animations_on_hover.css");
 @import url("/css/animations_on_visible.css");
 @import url("/css/footer.css");
+@import url("/css/global_responsive_vars.css");
 
 html {
     height: 100%;
@@ -145,15 +146,29 @@ a {
     stroke: var(--highlight_mid);
 }
 
-/*** Media Queries ***/
+/*** Specific Media Queries ***/
 
-@media all and (max-width: 1920px) {
+@media all and (max-width: 2000px) {
     html {
-        font-size: 80%;
+        font-size: var(--font_size_below_2000);
     }
 }
-@media all and (max-width: 1366px) {
+@media all and (max-width: 1400px) {
     html {
-        font-size: 62.5%;
+        font-size: var(--font_size_below_1400);
+    }
+}
+@media all and (max-width: 800px) {
+    html {
+        font-size: var(--font_size_below_800);
+    }
+    .contact_item p {
+        margin-left: 0px;
+    }
+    .contact_item {
+    display: grid;
+    grid-template: "icon" "label";
+    grid-row-gap: 0px;
+    width: inherit;
     }
 }
