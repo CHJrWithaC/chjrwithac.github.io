@@ -24,7 +24,7 @@
                                 Ramshackle
                             </h1>
                             <p id = "project_subtitle" class = "animate_on_visible slide_right_fade_in">
-                                A rear-wheel drive, double-wishbone suspended, Ackermann-steering electric longboard
+                                A double-wishbone suspended, Ackermann-steering electric longboard
                             </p>
                         </div>
                         <div id = "render_wrapper">
@@ -43,7 +43,7 @@
                                 <mark class = "gradient_text_style_1">Project Ramschackle</mark> draws heavy inspiration from the engineering marvel that is the Baja Board. A true aesthetic treat for the eyes, the Baja Board boasts a masterfully integrated gas-shock system and double-wishbone suspension that are as functional as they are beautiful.
                             </p>
                             <p>
-                                While the Ramshackle can never even hope to rival its shining idol, the intangible takeaways from the process of attempting to get there are the real good stuffs. Creating the Ramshackle has put me through the full gauntlet from part sourcing and speccing, engineering drawing and GD&T, manufacturing and machining and so much more.
+                                While the Ramshackle can never hope to rival its shining idol, the intangible takeaways from the process of attempting it are the real good stuff. Creating the Ramshackle put me through the full gauntlet or prototyping: from part sourcing and speccing, engineering drawing and GD&T, designing for manufacturing and so much more.
                             </p>
                             <p>
                                 A major regret of mine is not having taken more videos and pictures of this project before I decommissioned it. The media you see on this page don't tell its story all that well, and I apologise for this. Nevertheless, this wild ride truly lived up to its name, both pre- and post-development, and I hope you enjoy it as much as I did!
@@ -76,7 +76,7 @@
                                 </p>
                                 <div class = "expand_on_read_more">
                                     <p>
-                                        Power flows from a re-purposed 22.2V 6S 10000mAh flat-pack LiPo battery through a 100A-rated on-off turn-switch to an also re-purposed HobbyKing X-Car Beast Series ESC which connects directly to the RC receiver and the rear-wheel Turnigy Aerodrive SK3 - 6374-192KV out-runner BLDC motor. Each driving wheel is connected by a GT2 3:1 pulley system to the motor shaft.
+                                        Power flows from a re-purposed 22.2V 6S 10000mAh flat-pack LiPo battery through a 100A-rated on-off turn-switch to an also re-purposed HobbyKing X-Car Beast Series ESC which connects directly to the RC receiver and the rear-wheel Turnigy Aerodrive SK3 - 6374-192KV out-runner BLDC motor. Each driving wheel is connected by a HTD 3:1 pulley system to the motor shaft.
                                     </p>
                                 </div>
                                 <div class = "read_more_button expand grow_on_hover highlight_on_hover">
@@ -196,7 +196,7 @@
                                 </h2>
                                 <div class = "section_text animate_on_visible slide_left_fade_in">
                                     <p>
-                                        The shock absorbers of suitable dimensions, stroke length and force are either way outside of my budget or non-existant. I figured that the working principle of a shock is actually pretty simple, so I hacked together some low-cost components to create a custom, adjustable shock assembly that actually worked amazingly well (for the abomination that it is)! Each gas-shock is comprised of a car boot gas-spring with removeable rod ends, a spring slipped onto the gas-spring's piston rod, and multiple M6 nuts used as spacers to control the spring's pre-compression and thus the shock's overall force profile.
+                                        Shock absorbers of suitable dimensions, stroke length and force are either way outside of my budget or non-existant. I figured that the working principle of a shock is actually pretty simple, so I hacked together some low-cost components to create a custom, adjustable shock assembly that actually worked amazingly well (for the abomination that it is)! Each homebrew gas-shock is comprised of a car boot gas-spring with removeable rod ends, a spring slipped onto the gas-spring's piston rod, and multiple M6 nuts used as spacers to control the spring's pre-compression and thus the shock's preload.
                                     </p>
                                 </div>
                             </div>
@@ -215,14 +215,14 @@
                                 </h2>
                                 <div class = "section_text animate_on_visible slide_right_fade_in">
                                     <p>
-                                        One of the greatest challenges encountered in the Ramshackle's design was in figuring out how to translate the longboard rider's leaning motions into the action of an Ackermann steering system. The two-tier body design was developed from a reverse-engineering guess at how the Baja Board accomplishes this--a guess derived from ambiguous online pictures at the time when the Baja Board was still in its early pre-production stages.
+                                        One of the greatest challenges encountered in the Ramshackle's design was in figuring out how to translate the longboard rider's leaning motions into the action of an Ackermann steering system. The two-tier body design was developed as a reverse-engineering guess at how the Baja Board accomplishes this--a guess derived from ambiguous online pictures at the time when the Baja Board was still in its early pre-production stages.
                                     </p>
                                     <div class = "expand_on_read_more">
                                         <p>
                                             The top deck is intended to tilt with the rider's lean and control a set of steering arms per pair of wheels, while the lower tier remains parallel to the ground at all times. Note that the entire body floats on the suspension system, making keeping the lower tier level at all times while accomodating for dynamic movement non-trivial.
                                         </p>
                                         <p>
-                                            Ackermann steering geometry allows each wheel to follow their own turning circles, reducing the axial forces the wheels endure during turning. This feature is especially critical for the Ramshackle, as its control arms are particularly suspectible to failure by such axial forces, which they ideally should not be.
+                                            Ackermann steering geometry allows each wheel to follow their own turning circles, reducing the axial forces the wheels endure during turning. This feature is especially critical for the Ramshackle, as its control arms are particularly suspectible to failure by such axial forces (which they ideally should not be).
                                         </p>
                                     </div>
                                     <div class = "read_more_button expand grow_on_hover highlight_on_hover">
@@ -264,17 +264,11 @@
                                     </h3>
                                     <div class = "section_text">
                                         <p>
-                                            A pretty major caveat of the current control arm design lies in the fact that it is comprised of multiple parts assembled impermanently together: the two struts on each arm are secured by mere set-screws to a common block that interfaces with the knuckle.
+                                            A pretty major caveat of the current control arm design lies in the fact that it is comprised of multiple parts assembled impermanently together: the two struts on each arm are secured by anemic set-screws to a common block that interfaces with the knuckle.
 
-                                            In practice, control arms undergo large tensile and compressive forces. In this case, there is a real risk of the set-screws shaking loose and the struts slipping out of the common block completely: a catastrophic failure.
+                                            During operation, control arms undergo large tensile and compressive forces. In this case, there is a real risk of the set-screws shaking loose and the struts slipping out of the common block completely: a catastrophic failure. If the control arm does not fail by that mode, the stainless steel set-screws shear the softer aluminum surface and allow the rods to slip bit-by-bit over time anyway.
 
-                                            However, it must be said that this design choice was very intentional within my constraints, and for good reasons:
-                                        </p>
-                                        <p>
-                                            1) Being unable to afford trial-and-error in production, capacity for adjustments and re-assembly was THE top priority.
-                                        </p>
-                                        <p>
-                                            2) The individual parts of the control arm are collectively very much cheaper to produce.
+                                            However, it must be said that this design choice was (unfortnately) intentional within my constraints, and for good reasons: 1) Being unable to afford trial-and-error in production, capacity for adjustments and re-assembly was THE top priority; 2) The individual parts of the control arm are collectively very much cheaper to produce; 3) I had a plan B safety feature designed into it to counter such a failure anyway, and I was willing to take this risk as the only one daring enough to ride this jank.
                                         </p>
                                     </div>
                                 </div>
@@ -285,6 +279,9 @@
                                     <div class = "section_text">
                                         <p>
                                             With a larger budget, it is ideal that the control arm be milled completely out of a single block of raw stock. Not only will that allay the worries of spontaneous unintentional disassembly during operation, the design freedom it presents will allow for an integrated spherical joint within the control arms for the kingpin axes.
+                                        </p>
+                                        <p>
+                                            However, milling does entail a lot of material wastage, and even with a large budget, it is not very material- nor cost-efficient. A better option--and one that is actually more realistic given my circumstances--is designing it out of weldment members and welding them together. Not only will there be minimal stock wastage, the process of manufacturing a weldment control arm requires access only to a metal-cutting circular saw, a welding machine (preferably a MIG welder for a newbie such as I) and a working space I can smith freely in without worry about endangering the furniture. A weldment control arm would be the way to go if those were at my disposal, and I do hope that one day they will be.
                                         </p>
                                     </div>
                                 </div>
@@ -304,10 +301,10 @@
                                     </h3>
                                     <div class = "section_text">
                                         <p>
-                                            The wheel knuckles, having to be made out of sheet-metal, came with various troublesome design constraints: it is ideal to have the kingpin axis as close to the wheel as possible, but with the sheet-metal design constraint, there was a significant minimal distance the wheel had to be from the knuckle. Consequently, the wheel does not pivot about a vertical axis that is coincident with its plane, increasing wheel scrub and axial forces on the wheel and control arm assembly.
+                                            The wheel knuckles, having to be made out of sheet-metal, came with various troublesome design constraints: it is ideal to have the kingpin axis as close to the wheel as possible, but under the sheet-metal design constraint, there was a significant minimal distance the wheel had to be from the knuckle. Consequently, the wheel does not pivot about a vertical axis that is coincident with its plane, increasing wheel scrub and axial forces on the wheel and control arm assembly.
                                         </p>
                                         <p>
-                                            The wheel axle also experiences larger-than-necessary bending moments due to awkward bearing placements, where the wheel axle extends further from the knuckle, and is supported by two admittedly sub-optimal (but very agreeable budget-wise) UCFL bearings on either side of the knuckle. The large bending moments severely increase radial and moment loads on these bearings, decreasing their operational lifespan.
+                                            The wheel axle also experiences larger-than-necessary bending moments due to awkward bearing placements, where the wheel axle extends further than needs to be from the knuckle, and is supported by two admittedly sub-optimal (but very agreeable budget-wise) UCFL bearings on either side of the knuckle. The large bending moments severely increase radial and moment loads on these bearings, decreasing their operational lifespan and performance.
                                         </p>
                                     </div>
                                 </div>
@@ -317,7 +314,10 @@
                                     </h3>
                                     <div class = "section_text">
                                         <p>
-                                            Instead of a clumsy sheet-metal design, a generous budget would allow for a milled, block-style knuckle with a significantly reduced spatial footprint that would be able to fit snugly up against and inside the rim of the wheel, much closer to the wheel's plane. This would allow the wheel to pivot about a kingpin axis much closer to its wheel plane. Despite a smaller size, it will allow for two in-set bearings spaced further apart along the wheel axle to reduce the radial and moment loads on each bearing. Instead of radial bearings, thrust bearings may be used as well, although that may be a bit excessive for the forces in consideration.
+                                            Instead of a clumsy sheet-metal design, a generous budget would accomodate a milled, block-style knuckle. Unlike the control arm, this block-style knuckle can easily be designed for minimal material wastage when milled from raw stock, making milling the ideal method of manufacture for the improved design I'm holding in my mind.
+                                        </p>
+                                        <p>
+                                            This block-style knuckle will present a significantly reduced spatial footprint and would be able to fit snugly up against and inside the rim of the wheel, much closer to the wheel's plane. This would allow the wheel to pivot about a kingpin axis much closer to its wheel plane. Despite a smaller size, it will allow for two in-set bearings spaced further apart along the wheel axle to reduce the radial and moment loads on each bearing. Instead of radial bearings, thrust bearings may be used as well, although that may be a bit excessive for the forces in consideration.
                                         </p>
                                     </div>
                                 </div>
