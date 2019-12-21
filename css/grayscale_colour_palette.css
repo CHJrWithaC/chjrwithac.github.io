@@ -1,8 +1,8 @@
 :root {
     /* Grayscale Dark Theme */
-    --highlight_base: rgb(158, 158, 158);
-    --highlight_mid: rgb(180, 180, 180);
-    --highlight_bright: rgb(228, 228, 228);
+    --highlight_base: rgb(175, 175, 175);
+    --highlight_mid: rgb(221, 221, 221);
+    --highlight_bright: rgb(255, 255, 255);
     --dark_base: rgb(78, 78, 78);
     --dark_mid: #747474;
     --background_colour: #040404;
