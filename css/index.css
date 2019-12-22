@@ -147,6 +147,9 @@ body {
     html {
         font-size: var(--font_size_below_800);
     }
+    #text_block_wrapper {
+        margin-top: 8vw;
+    }
     #text_block_wrapper h1 {
         width: 80vw;
         max-width: 390px;
