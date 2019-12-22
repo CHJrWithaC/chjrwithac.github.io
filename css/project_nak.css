@@ -2,8 +2,7 @@
 
 @import url("/css/orange_colour_palette.css");
 
-body::after{
-    /* Preloading */
+/* body::after{
     position: absolute;
     width: 0;
     height: 0;
@@ -32,7 +31,7 @@ body::after{
         url("/project_media/project_nak/videos/tripod_xyz.mp4")
         url("/project_media/project_nak/videos/xy_and_yaw.mp4")
         url("/project_media/project_nak/videos/xyz.mp4")
- }
+ } */
 
 #splash_band_content_wrapper #render_wrapper {
     filter: brightness(1.2);
