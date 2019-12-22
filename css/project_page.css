@@ -235,6 +235,8 @@ hr {
     display: block;
     width: 40vw;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 #design_overview_band_content_wrapper #text_content_wrapper {
     grid-area: content_text;

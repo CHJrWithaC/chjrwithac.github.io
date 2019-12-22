@@ -26,6 +26,8 @@ Requires:
     height: inherit;
     align-self: center;
     margin-left: 3vw;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 #logo_wrapper {
     align-self: center;
@@ -67,6 +69,8 @@ Requires:
     font-family: "Aldrich";
     font-size: 1.6em;
     color: var(--highlight_base);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 #menu_icon_wrapper {
@@ -78,6 +82,8 @@ Requires:
     right: 0px;
     margin-right: 5vw;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 #menu_icon_wrapper i {
     color: var(--highlight_base);
@@ -91,6 +97,8 @@ Requires:
     right: 0px;
     margin-right: 5vw;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 #back_icon_wrapper i {
     color: var(--highlight_base);

@@ -19,6 +19,9 @@ Requires:
     display: flex;
     justify-content: center;
     margin-top: 1vh;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 #footer #nav_arrow_wrapper svg path {
     fill: var(--highlight_base);

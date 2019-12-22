@@ -96,6 +96,10 @@ a {
     margin-top: 24vh;
     margin-bottom: 30vh;
 }
+.project_item_link_wrapper {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
 .project_item {
     position: relative;
     display: grid;
