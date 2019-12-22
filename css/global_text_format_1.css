@@ -4,6 +4,7 @@ p {
     font-size: 1.6em;
     color: var(--highlight_base);
     margin-top: 5em;
+    line-height: 1.2em;
 }
 p + p {
     margin: 0px;

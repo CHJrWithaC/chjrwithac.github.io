@@ -57,9 +57,15 @@ p {
 #content_wrapper {
     position: relative;
     display: flex;
-    flex-direction: column;
+    width: inherit;
+    height: inherit;
+}
+#text_wrapper {
+    position: relative;
+    display: grid;
+    align-self: center;
     margin-left: 10vw;
-    margin-top: 18vh;
+    margin-bottom: 10vh;
     width: 60vw;
 }
 
@@ -127,7 +133,7 @@ p {
         font-size: var(--font_size_below_800);
     }
     #content_wrapper {
-        margin-top: 32vw;
+        /* margin-top: 32vw; */
         min-width: 280px;
     }
 }

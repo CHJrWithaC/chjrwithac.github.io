@@ -52,15 +52,16 @@ body {
     width: inherit;
 }
 #text_block_wrapper {
-    position: relative;
+    position: absolute;
     display: grid;
     height: 60vh;
-    margin-top: 14vh;
+    align-self: center;
 }
 #text_block_wrapper h1 {
     font-size: 6em;
     align-self: center;
     min-width: 300px;
+    margin: 0px;
 }
 #text_block_wrapper h2 {
     margin: 0px;
@@ -148,10 +149,10 @@ body {
         font-size: var(--font_size_below_800);
     }
     #text_block_wrapper {
-        margin-top: 8vw;
+        height: unset;
     }
     #text_block_wrapper h1 {
-        width: 80vw;
+        width: 60vw;
         max-width: 390px;
     }
     #text_block_wrapper #text_wrapper p {

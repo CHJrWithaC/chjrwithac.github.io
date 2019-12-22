@@ -61,13 +61,22 @@ a {
 
 /* Content */
 
+
 #content_wrapper {
-    display: block;
     position: relative;
+    display: flex;
+    width: inherit;
+    height: inherit;
+}
+#text_wrapper {
+    position: relative;
+    display: grid;
+    align-self: center;
     margin-left: 10vw;
-    margin-top: 30vh;
+    margin-bottom: 10vh;
     width: 60vw;
 }
+
 .contact_item_link_wrapper {
     cursor: unset;
     display: block;
