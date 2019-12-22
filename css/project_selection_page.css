@@ -40,6 +40,19 @@ body {
     scroll-behavior: smooth;
 }
 
+body::after{
+    /* Preloading */
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -10;
+    content:
+        url("/project_media/project_nak/renders/render_1.png")
+        url("/project_media/project_ramshackle/renders/ramshackle_1.png")
+        url("/project_media/project_endeavour/renders/render_1.png");
+ }
+
 img {
     height: auto;
     width: 100%;

@@ -1,3 +1,24 @@
 @import url("/css/project_page.css");
 
 @import url("/css/grayscale_colour_palette.css");
+
+body::after{
+    /* Preloading */
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -10;
+    content:
+        url("/project_media/project_ramshackle/renders/ramshackle_1.png")
+        url("/project_media/project_ramshackle/gifs/explosion_1/explosion_1_start.png")
+        url("/project_media/project_ramshackle/gifs/explosion_1/explosion_1_end.png")
+        url("/project_media/project_ramshackle/gifs/explosion_1/explosion_1_forward.gif")
+        url("/project_media/project_ramshackle/gifs/explosion_1/explosion_1_reversed.gif")
+        url("/project_media/project_ramshackle/pictures/gas_shock.jpg")
+        url("/project_media/project_ramshackle/pictures/safety_casters.jpg")
+        url("/project_media/project_ramshackle/pictures/skeleton.jpg")
+        url("/project_media/project_ramshackle/videos/in_action_cut.mp4")
+        url("/project_media/project_ramshackle/videos/steering_rotated.mp4")
+        url("/project_media/project_ramshackle/videos/suspension.mp4");
+ }
