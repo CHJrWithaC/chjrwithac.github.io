@@ -2,31 +2,6 @@
 
 @import url("/css/red_colour_palette.css");
 
-/* body::after{
-    position: absolute;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    z-index: -10;
-    content:
-        url("/project_media/project_endeavour/renders/render_1.png")
-        url("/project_media/project_endeavour/gifs/explosion_1/explosion_1_start.png")
-        url("/project_media/project_endeavour/gifs/explosion_1/explosion_1_end.png")
-        url("/project_media/project_endeavour/gifs/explosion_1/explosion_1_forward.gif")
-        url("/project_media/project_endeavour/gifs/explosion_1/explosion_1_reversed.gif")
-        url("/project_media/project_endeavour/pictures/off_road_1.jpg")
-        url("/project_media/project_endeavour/pictures/off_road_2.jpg")
-        url("/project_media/project_endeavour/pictures/off_road_3.jpg")
-        url("/project_media/project_endeavour/pictures/off_road_4.jpg")
-        url("/project_media/project_endeavour/pictures/stance_1.jpg")
-        url("/project_media/project_endeavour/videos/ez_plug_1.mp4")
-        url("/project_media/project_endeavour/videos/off_road_1.mp4")
-        url("/project_media/project_endeavour/videos/rolling_jump.mp4")
-        url("/project_media/project_endeavour/videos/static_jump.mp4")
-        url("/project_media/project_endeavour/videos/tight_turns_1.mp4")
-        url("/project_media/project_endeavour/videos/tight_turns_2.mp4")
- } */
-
 #media_wrapper {
     filter: brightness(1.5)
 }
