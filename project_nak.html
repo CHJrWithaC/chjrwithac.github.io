@@ -203,7 +203,7 @@
                                 </h2>
                                 <div class = "section_text animate_on_visible slide_left_fade_in">
                                     <p>
-                                        The parameterisation of the foot trajectory during gaits--as opposed to hard-coding a fixed cyclic sequence--enables the Nak to change its gait speed and direction at any point in its motion instantaneously and elegantly without interruption of the trajectory already in motion. It also accomodates fine-tuning swing-to-stance phase ratios on-the-fly, allowing the Nak to change how long feet stay in the air or on the ground during gaits to augment gait stability. The parameterisation is compatible with the pose transforms, meaning that the Nak can manipulate its body during gaits exactly just it can while stationary.
+                                        The parameterisation of the foot trajectory during gaits--as opposed to hard-coding a fixed cyclic sequence--enables the Nak to change its gait speed and direction at any point in its motion instantaneously and elegantly without interruption of the trajectory already in motion. It also accomodates fine-tuning swing-to-stance phase ratios on the fly, allowing the Nak to change how long feet stay in the air or on the ground during gaits to augment gait stability. The parameterisation is compatible with the pose transforms, meaning that the Nak can manipulate its body during gaits exactly just it can while stationary.
                                     </p>
                                     <div class = "expand_on_read_more">
                                         <p>
@@ -384,7 +384,7 @@
                                             Due to the long tibia and short femur and coxa, the workspace of each leg--thinking of each leg as an RRR manipulator chain--is largely dictated by that of the tibia alone about its own joint. The fact that a single DOF dictates the overall reach of each leg greatly limits the effective workspace of all legs combined. In other words, the feet of the Nak are limited to a relatively restricted spatial range despite the long overall length of the leg. 
                                         </p>
                                         <p>
-                                            Admittedly, the legs of the Nak were designed to a proportion that looked cool first before being functionally optimal; the longer tibia was intentional for aesthetic purposes. In my defence, though, this would not have been a problem if the femur and coxa could be made longer. However, in the interests of keeping servo loading minimal, leg segments that are frequently parallel to the ground during loading were intentionally designed to be as short as possible.
+                                            Admittedly, the legs of the Nak were designed to a proportion that looked cool first before being functionally optimal. In my defence, though, this would not have been a problem if the femur and coxa could be made longer. However, in the interests of keeping servo loading minimal, leg segments that are frequently parallel to the ground during loading were intentionally designed to be as short as possible.
                                         </p>
                                     </div>
                                 </div>
@@ -394,7 +394,7 @@
                                     </h3>
                                     <div class = "section_text">
                                         <p>
-                                            Within the constraints of using the same servo motors, the tibia could just simply be made shorter. While that would reduce overall leg workspace, the problem here is not the leg's workspace, but the proportion of the leg's workspace a single segment controls. By making the tibia closer to the length of the other 2 segments, the leg will be more efficient in terms of workspace normalised by leg-length.
+                                            Within the constraints of using the same servo motors, the tibia could simply be made shorter. While that would reduce overall leg workspace, the problem here is not the leg's workspace, but the proportion of the leg's workspace a single segment controls. By making the tibia closer to the length of the other 2 segments, the leg will be more efficient in terms of workspace normalised by leg length.
                                         </p>
                                         <p>
                                             By opting for beefier servo motors however, the femur and coxa can just be made longer, thereby extending both the workspace of the leg, and its workspace efficiency by leg length.
@@ -417,7 +417,7 @@
                                     </h3>
                                     <div class = "section_text">
                                         <p>
-                                            The body of the Nak is the major contributor to its hefty mass, and had to be that large to accomodate the Arduino Mega 2560. The Arduino Mega 2560 was chosen for its large number of pin-change-interrupt (PCINT) capable pins necessary for interfacing with the 2.4GHz receiver's 10 channels. However, its large footprint leaves much to be desired.
+                                            The body of the Nak is the major contributor to its hefty mass, and had to be that large mostly to accomodate the Arduino Mega 2560. The Arduino Mega 2560 was chosen for its large number of pin-change-interrupt (PCINT) pins necessary for interfacing with the 2.4GHz receiver's 10 channels. However, its large footprint leaves much to be desired.
                                         </p>
                                     </div>
                                 </div>
@@ -427,10 +427,10 @@
                                     </h3>
                                     <div class = "section_text">
                                         <p>
-                                            At the time of writing this, the Teensy 4.0 presents a far superior option to the Arduino Mega 2560. Not only is it a fraction of the size, it boasts a whopping 600MHz in clockspeed (the Arduino Mega 2560 clocks in at only 16MHz!), and 23 digital pins which are all PCINT-capable! One caveat though: the Teensy 4.0 is exclusively a 3V3 device, with no 5V-tolerant pins. This isn't much of a drawback though, as a transistor-transistor-logic (TTL) converter can handle the conversion between 3V3 and 5V signals with ease.
+                                            At the time of writing this, the Teensy 4.0 presents a far superior option to the Arduino Mega 2560. Not only is it a fraction of the size, it boasts a whopping 600MHz in clockspeed (the Arduino Mega 2560 clocks in at only 16MHz!), and 23 digital pins which are all PCINT-enabled! One caveat though: the Teensy 4.0 is exclusively a 3V3 device, with no 5V-tolerant pins, while the 2.4GHz receiver outputs 4-6.5V signals. Yet, this isn't much of a hurdle, considering a very simple and low-cost transistor-transistor-logic (TTL) converter can handle the conversion between 3V3 and 5V signals with ease.
                                         </p>
                                         <p>
-                                            A TTL converter is capable of converting signals at a frequency of up to 100MHz to 200MHz, depending on quality of construction. Signals coming from the 2.4GHz receiver are 50Hz in frequency, meaning that the TTL converter will contribute no appreciable rising- and falling-edge hysteresis in the signals.
+                                            A TTL converter is capable of exchanging signals at frequencies of up to 100MHz to 200MHz, depending on quality of construction. Signals coming from the 2.4GHz receiver are 50Hz in frequency, meaning that the TTL converter will contribute no appreciable rising- and falling-edge hysteresis in the process.
                                         </p>
                                     </div>
                                 </div>
