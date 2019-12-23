@@ -67,6 +67,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-size: 2em;
+    margin-top: 1vh;
     color: var(--highlight_mid);
 }
 #text_block_wrapper h3 {

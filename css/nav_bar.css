@@ -76,7 +76,7 @@ Requires:
 #menu_icon_wrapper {
     position: absolute;
     display: none;
-    font-size: 3em;
+    font-size: 2.4em;
     z-index: 4;
     align-self: center;
     right: 0px;
@@ -91,7 +91,7 @@ Requires:
 #back_icon_wrapper {
     position: absolute;
     display: none;
-    font-size: 3em;
+    font-size: 2.4em;
     z-index: 4;
     align-self: center;
     right: 0px;
@@ -115,7 +115,7 @@ Requires:
     #logo_wrapper #logo_svg {
         justify-self: center;
         align-self: center;
-        height: 6em;
+        height: 60%;
         width: auto;
     }
     #menu_icon_wrapper {
@@ -141,7 +141,7 @@ Requires:
     }
     #nav_bar_list li {
         margin-top: 10vh;
-        font-size: 1.6em;
+        font-size: 1.2em;
         opacity: 0;
         transition: opacity 0.5s ease-out;
     }
