@@ -106,8 +106,14 @@ hr {
     overflow: hidden;
     transition: max-height 0.5s ease-in;
 }
-.expand_on_read_more.expanded {
-    max-height: 60em !important;
+.expand_on_read_more.expanded.short {
+    max-height: 50em !important;
+}
+.expand_on_read_more.expanded.medium {
+    max-height: 100em !important;
+}
+.expand_on_read_more.expanded.long {
+    max-height: 150em !important;
 }
 
 /*** Parallax layers ***/
