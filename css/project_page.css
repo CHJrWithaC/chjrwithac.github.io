@@ -658,7 +658,7 @@ hr {
         grid-template: "cad" "content_text";
         grid-column-gap: 5vw;
     }
-    #design_overview_band_content_wrapper #media_wrapper {
+    #design_overview_band_content_wrapper .media_wrapper {
         justify-self: center;
     }
     #design_overview_band_content_wrapper #text_content_wrapper {
