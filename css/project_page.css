@@ -1,7 +1,4 @@
 
-/* Font Imports */
-@import url('https://fonts.googleapis.com/css?family=Aldrich|Megrim|Offside|Syncopate:400,700&display=swap');
-
 /* Custom Imports */
 @import url("/css/loading_screen.css");
 @import url("/css/grayscale_colour_palette.css");
@@ -19,7 +16,7 @@
 
 html {
     height: 100%;
-    font-family: "Aldrich";
+    font-family: var(--global_default_font);
     font-size: 62.5%;
 
     overflow: hidden;
@@ -182,7 +179,7 @@ hr {
     left: 0.5em;
     top: 1.5em;
     width: 20em;
-    font-size: 1.6em;
+    font-size: 1.7em;
     color: var(--highlight_base);
     margin-top: 0px;
 
@@ -555,7 +552,7 @@ hr {
 }
 .bg_hex_skele_wrapper {
     position: relative;
-    opacity: 0.25;
+    opacity: 0.2;
     height: 100vh;
     display: grid;
     align-content: center;

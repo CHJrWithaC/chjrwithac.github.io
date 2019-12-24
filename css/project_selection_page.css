@@ -1,7 +1,4 @@
 
-/* Font Imports */
-@import url('https://fonts.googleapis.com/css?family=Aldrich|Megrim|Offside|Syncopate:400,700&display=swap');
-
 /* Custom Imports */
 @import url("/css/loading_screen.css");
 @import url("/css/purple_colour_palette.css");
@@ -198,7 +195,7 @@ a {
 }
 .bg_hex_skele_wrapper {
     position: relative;
-    opacity: 0.2;
+    opacity: 0.15;
     height: 100vh;
     display: grid;
     align-content: center;

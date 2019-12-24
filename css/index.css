@@ -1,7 +1,4 @@
 
-/* Font Imports */
-@import url('https://fonts.googleapis.com/css?family=Aldrich|Megrim|Offside|Syncopate:400,700&display=swap');
-
 /* Custom Imports */
 @import url("/css/loading_screen.css");
 @import url("/css/blue_colour_palette.css");
@@ -15,7 +12,7 @@
 
 html {
     height: 100%;
-    font-family: "Aldrich";
+    font-family: var(--global_default_font);
     font-size: 62.5%;
 
     overflow: hidden;
@@ -121,7 +118,7 @@ body {
     fill: var(--dark_mid);
 }
 #splash_background_wrapper svg {
-    opacity: 0.2;
+    opacity: 0.15;
     width: 100vw;
     height: auto;
 }
