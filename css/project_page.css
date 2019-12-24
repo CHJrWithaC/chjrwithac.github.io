@@ -228,13 +228,26 @@ hr {
     grid-template: "cad content_text" / 5fr 4fr;
     grid-column-gap: 5vw;
 }
-
-#design_overview_band_content_wrapper #media_wrapper {
+#design_overview_band_content_wrapper .media_wrapper {
     grid-area: cad;
     justify-self: end;
     align-self: center;
 }
-#design_overview_band_content_wrapper #media_wrapper #explosion_gif {
+#design_overview_band_content_wrapper .media_wrapper .feature_video {
+    position: absolute;
+    z-index: 1;
+    width: var(--global_video_width);
+    height: auto;
+}
+#design_overview_band_content_wrapper .media_wrapper .media_backing {
+    position: relative;
+    width: var(--global_video_width);
+    height: calc((var(--global_video_width) / 16) * 9);
+    margin-top: 3vh;
+    margin-left: -2vw;
+    background: linear-gradient(90deg,var(--highlight_mid) 7.55%, rgba(0, 0, 0, 0) 100%);
+}
+#design_overview_band_content_wrapper .media_wrapper #explosion_gif {
     display: block;
     width: 40vw;
     cursor: pointer;
@@ -542,6 +555,18 @@ hr {
 .upgrade_wrapper {
     grid-area: upgrade;
     justify-self: left;
+}
+
+#summary_band {
+    position: relative;
+    height: fit-content;
+}
+#summary_band_content_wrapper {
+    margin-top: 30vh;
+    position: relative;
+    width: inherit;
+    height: inherit;
+    z-index: 3;
 }
 
 /*** Background Stuff ***/

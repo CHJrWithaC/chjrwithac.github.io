@@ -48,7 +48,7 @@
                             </p>
                         </div>
                         <div id = "render_wrapper">
-                            <img class = "animate_on_visible slide_left_fade_in" src = "/project_media/project_endeavour/renders/render_1.png" id = "render">
+                            <img class = "animate_on_visible slide_left_fade_in" src = "/project_media/project_dogTrot/graphics/splash.svg" id = "render">
                         </div>
                     </div>
                 </div>
@@ -79,15 +79,13 @@
                 
                 <div id = "design_overview_band">
                     <div id = "design_overview_band_content_wrapper">
-                        <div id = "media_wrapper" class = "animate_on_visible slide_right_fade_in">
-                            <div style = "display: none;">
-                                <!-- Pre-load images to prevent stuttering -->
-                                <img id = "first_frame" src = "/project_media/project_endeavour/gifs/explosion_1/explosion_1_start.png">
-                                <img id = "end_frame" src = "/project_media/project_endeavour/gifs/explosion_1/explosion_1_end.png">
-                                <img id = "forward_gif" src = "/project_media/project_endeavour/gifs/explosion_1/explosion_1_forward.gif">
-                                <img id = "reversed_gif" src = "/project_media/project_endeavour/gifs/explosion_1/explosion_1_reversed.gif">
-                            </div>
-                            <img id = "explosion_gif" src = "/project_media/project_endeavour/gifs/explosion_1/explosion_1_start.png" class = "animate_on_visible">
+                        <div class = "media_wrapper">
+                            <video class = "feature_video animate_on_visible slide_right_fade_in" width = "320" height = "240" controls  disablePictureInPicture controlsList = "nodownload" preload = "metadata"
+                            poster = "/project_media/project_dogTrot/videos/posters/cad_poster.png">
+                                <source src="/project_media/project_dogTrot/videos/cad.m4v" type="video/mp4">
+                                ERROR: Your browser does not support the video tag!
+                            </video>
+                            <div class = "media_backing animate_on_visible slide_right_fade_in"></div>
                         </div>
                         <div id = "text_content_wrapper">
                             <h1 class = "gradient_text_style_1 animate_on_visible slide_left_fade_in">
@@ -129,8 +127,8 @@
                         <section class = "key_feature_section odd">
                             <div class = "media_wrapper">
                                 <video class = "feature_video animate_on_visible slide_right_fade_in" width = "320" height = "240" controls  disablePictureInPicture controlsList = "nodownload" preload = "metadata"
-                                poster = "/project_media/project_endeavour/videos/posters/ez_plug_1_poster.png">
-                                    <source src="/project_media/project_dogTrot/trot.mp4" type="video/mp4">
+                                poster = "/project_media/project_dogTrot/videos/posters/trot_poster.png">
+                                    <source src="/project_media/project_dogTrot/videos/trot.m4v" type="video/mp4">
                                     ERROR: Your browser does not support the video tag!
                                 </video>
                                 <div class = "media_backing animate_on_visible slide_right_fade_in"></div>
@@ -141,14 +139,14 @@
                                 </h2>
                                 <div class = "section_text animate_on_visible slide_left_fade_in">
                                     <p>
-                                        As DogTrot was designed with symmetry in mind, I posited that a gait and foot trajectory could be designed to take advantage of this symmetry to eliminate complications in the dynamics involved. Each foot follows a vertical triangular trajectory with rounded corners that is approximately symmetric with respect to the frontal plane, with its origin a location defined with respect to the body frame (the trajectories move with and are fixed in the body frame). The gait pattern chosen is the trot, where each leg moves antagonistically 180&deg out of phase with respect to its closest-neighbouring leg. The intention here is to eliminate or minimise moments about the anteroposterior and dextro-sinister axes of DogTrot throughout gait cycles.
+                                        As DogTrot was designed with symmetry in mind, I posited that a gait and foot trajectory could be designed to take advantage of this symmetry to eliminate complications in the dynamics involved. Each foot follows a vertical triangular trajectory with rounded corners that is approximately symmetric with respect to the frontal plane, with its origin a location defined with respect to the body frame (the trajectories move with and are fixed in the body frame). The gait pattern chosen is the trot, where each leg moves antagonistically 180&deg out of phase with respect to its closest neighbour-leg. The intention here is to eliminate or minimise moments about the anteroposterior and dextro-sinister axes of DogTrot throughout gait cycles.
                                     </p>
                                     <div class = "expand_on_read_more long">
                                         <p>
-                                            It is unavoidable that DogTrot will experience instantaneous disturbances to roll and pitch throughout the gait, as the antagonistic pairs of feet are not guaranteed to exert the same force on the ground to counter each other's generated moments. To account for this, each leg is modelled to be a series-elastic actuator (SEA) stemming from the shoulder joint and extending to the foot. This model is approximately implemented by registering derived spring and damping constants to the shoulder and knee joints of each leg in VREP. The idea here is that by the elastic nature of each leg, the legs on the side towards which DogTrot is rolling/pitching will, upon contact with the ground, compress more than the others and thus exert a greater force to correct for the undesirable rolling/pitching--the force exerted by the feet increase with shoulder proximity to the ground due to the rolling/pitching of the body.
+                                            It is unavoidable that DogTrot will experience sporadic rolling and pitching throughout the gait, as the antagonistic pairs of feet are not guaranteed to exert equal forces on the ground to counter each other's generated moments. To account for this, each leg is modelled to be a series-elastic actuator (SEA) stemming from the shoulder joint and extending to the foot. The idea here is that by the elastic nature of each leg, the legs on the side towards which DogTrot is rolling/pitching will, upon contact with the ground, compress more than the others and thus exert a greater force to correct for the undesirable rolling/pitching; the force exerted by a foot increases with its shoulder proximity to the ground due to the rolling/pitching of the body.
                                         </p>
                                         <p>
-                                            The SEA model introduces trajectory cycle frequency concerns, and features a smaller mechanical bandwidth than its rigid counterpart. The frequency of cyclic foot loading must hence deviate from harmonics of the resonant frequency of the SEA leg to avoid oscillation amplitude growing out of control over time. The smaller mechanical bandwidth needs to encompass cycle frequencies significantly distant from these harmonics as well to ensure fast response times.
+                                            The SEA is an oscillating system, and thus has a natural frequency much lower than its rigid counterpart. It thus becomes necessary to ensure that the frequency of cyclic foot loading deviates from harmonics of this resonant frequency to avoid unbounded oscillation growth. The SEA model also features a smaller mechanical bandwidth than its rigid counterpart, which needs to encompass frequencies significantly distant from these harmonics for fast response times.
                                         </p>
                                         <p>
                                             Tuning foot trajectory and cycle frequency accordingly, DogTrot is able to perform a stable gait across an arbitrary number of gait cycles.
@@ -172,8 +170,8 @@
                         <section class = "key_feature_section even">
                             <div class = "media_wrapper">
                                 <video class = "feature_video animate_on_visible slide_right_fade_in" width = "320" height = "240" controls  disablePictureInPicture controlsList = "nodownload" preload = "metadata"
-                                poster = "/project_media/project_endeavour/videos/posters/ez_plug_1_poster.png">
-                                    <source src="/project_media/project_dogTrot/bound.mp4" type="video/mp4">
+                                poster = "/project_media/project_dogTrot/videos/posters/bound_poster.png">
+                                    <source src="/project_media/project_dogTrot/videos/bound.m4v" type="video/mp4">
                                     ERROR: Your browser does not support the video tag!
                                 </video>
                                 <div class = "media_backing animate_on_visible slide_right_fade_in"></div>
@@ -192,8 +190,8 @@
                         <section class = "key_feature_section odd">
                             <div class = "media_wrapper">
                                 <video class = "feature_video animate_on_visible slide_right_fade_in" width = "320" height = "240" controls  disablePictureInPicture controlsList = "nodownload" preload = "metadata"
-                                poster = "/project_media/project_endeavour/videos/posters/ez_plug_1_poster.png">
-                                    <source src="/project_media/project_dogTrot/pronk_uncut.mp4" type="video/mp4">
+                                poster = "/project_media/project_dogTrot/videos/posters/pronk_poster.png">
+                                    <source src="/project_media/project_dogTrot/videos/pronk.m4v" type="video/mp4">
                                     ERROR: Your browser does not support the video tag!
                                 </video>
                                 <div class = "media_backing animate_on_visible slide_right_fade_in"></div>
@@ -204,11 +202,32 @@
                                 </h2>
                                 <div class = "section_text animate_on_visible slide_left_fade_in">
                                     <p>
-                                        As a little bonus, a pronking gait was attempted. As expected, the pronking gait entailed the lowest risk of instability, and DogTrot was able to perform many gait cycles without toppling. However, perhaps because of the lack of properly simulated traction and weak extension of the legs, the pronk effected was more motion than locomotion.
+                                        As a little bonus, a pronking gait was attempted. As expected, the pronking gait presented the lowest risk of instability, and DogTrot was able to perform an artbitrary number of gait cycles without faltering. However, perhaps because of the lack of properly simulated traction, weak extension of the legs, and/or badly designed foot trajectory, the effected pronk was more motive than locomotive.
                                     </p>
                                 </div>
                             </div>
                         </section>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div id = "summary_band">
+                    <div id = "summary_band_content_wrapper">
+                        <h1 class = "section_header gradient_text_style_1 animate_on_visible rising_fade_in">
+                            In Review
+                        </h1>
+                        <div class = "section_text animate_on_visible rising_fade_in">
+                            <p>
+                                While this method of achieving a stable gait may have demonstrated some efficacy, there are some major limitations as to its practical applications. For one, turning during gait is nearly impossible without additional layers of control. Many conditions (as presented in the Stable Trot section) must be met in order for this approach to work, and outside of these narrow constraints the method easily falls apart.
+                            </p>
+                            <p>
+                                It may be possible to expand on this method to accomodate for more directional control. However, the huge body of literature already in existence behind the problem of dynamic gait stability presents many far superior and comprehensive (albeit more involved) approaches to achieve all this and more, and it would be wiser to devote development time into de-mystifying those instead.
+                            </p>
+                            <p>
+                                Regardless, this project was just a little bit of weekend fun, and the process was undeniably rewarding.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
