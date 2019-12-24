@@ -611,13 +611,14 @@ hr {
         left: unset;
         margin-left: -20vw;
     }
+    #splash_band_content_wrapper #project_title {
+        font-size: 5em;
+    }
     #splash_band_content_wrapper #project_subtitle {
         width: 60vw;
         min-width: 10em;
-    
-    }
-    #splash_band_content_wrapper #project_title {
-        font-size: 5em;
+        top: 1.2em;
+        left: 0.2em;
     }
     #splash_band_content_wrapper #project_title_suffix {
         font-size: 3em;
@@ -655,7 +656,6 @@ hr {
         grid-template-columns: 1fr 1fr;
     }
 
-        
     .key_feature_section.odd {
         grid-template: "media" "content_text";
     }
