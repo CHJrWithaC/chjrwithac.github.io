@@ -669,7 +669,7 @@ hr {
         margin-top: 0.5em;
         margin-bottom: 0px;
     }
-    #design_overview_band_content_wrapper #media_wrapper #explosion_gif {
+    #design_overview_band_content_wrapper .media_wrapper #explosion_gif {
         width: 80vw;
     }
 
