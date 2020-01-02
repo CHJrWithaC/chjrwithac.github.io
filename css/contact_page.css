@@ -74,6 +74,9 @@ a {
     margin-bottom: 10vh;
     width: 60vw;
 }
+#text_wrapper h1 {
+    margin-right: auto;
+}
 
 .contact_item_link_wrapper {
     cursor: unset;
